@@ -1,8 +1,9 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Store} from './Store'
 
 const App: React.FC = () => {
+    const store = React.useContext(Store);
+    console.log(store);
   return (
     <div>
       hello
