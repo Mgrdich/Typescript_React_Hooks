@@ -18,8 +18,8 @@ const initialState: IState = {
 
 export const Store = React.createContext<IState | any>(initialState);
 
-function reducers(state: any, action: IAction) {
-
+function reducers(state: any, action: IAction): IState {
+    console.log(state);
     switch (action.type) {
         case 'FETCH_DATA':
             return {...state, episodes: action.payload};
@@ -30,5 +30,6 @@ function reducers(state: any, action: IAction) {
 
 export function StoreProvider(props: any): JSX.Element {
     const [state, dispatch] = React.useReducer(reducers, initialState);
+    console.log(state,dispatch);
     return <Store.Provider value={{state, dispatch}}>{props.children}</Store.Provider>
 }
