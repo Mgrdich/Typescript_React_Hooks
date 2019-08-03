@@ -1,6 +1,21 @@
 import React from 'react';
 import {Store} from './Store'
 
+interface IEpisode {
+
+    airdate: string
+    airstamp: string
+    airtime: string
+    id: number
+    image: { medium: string, original: string }
+    name: string
+    number: number
+    runtime: number
+    season: number
+    summary: string
+    url: string
+}
+
 const App = (): JSX.Element => {
     const {state, dispatch} = React.useContext(Store);
 
@@ -22,9 +37,24 @@ const App = (): JSX.Element => {
     console.log(state);
 
     return (
-        <div>
-            hello
-        </div>
+        <>
+            <h1>Rick and Morty</h1>
+            <section>
+                {
+                    state.episodes.map((episode: IEpisode) => {
+                        return (
+                            <div key={episode.id}>
+                                <img src={episode.image.medium} alt={`Rick and Morty ${episode.name}`}/>
+                                <div>{episode.name}</div>
+                                <div>
+                                    Season:{episode.season} Number {episode.number}
+                                </div>
+                            </div>
+                        )
+                    })
+                }
+            </section>
+        </>
     );
 };
 
