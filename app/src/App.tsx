@@ -21,12 +21,25 @@ const App = (): JSX.Element => {
     }
 
     function toggleAction(episode: any) {
-        return dispatch({
-            type: 'ADD_FAV',
-            payload: episode
-        })
-    }
 
+        const episodeCheck = state.favourites.includes(episode);
+        console.log(episodeCheck);
+        let favWithoutEpisode;
+        if (episodeCheck) {
+             favWithoutEpisode = state.favourites.filter((item: any) => {
+                return item.id !== episode.id
+            })
+        }
+        let objDispatch  = Object.assign({},
+                    episodeCheck && {type:'REMOVE_FAV',payload:favWithoutEpisode},
+                    !episodeCheck && {type:'ADD_FAV',payload:episode}
+
+            );
+        console.log(objDispatch);
+
+        return dispatch(objDispatch)
+    }
+    console.log(state);
     return (
         <>
             <section className="container">
