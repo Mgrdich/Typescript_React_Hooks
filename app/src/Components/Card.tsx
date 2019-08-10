@@ -9,7 +9,7 @@ const Card = (props: IEpisode) => {
         const episodeCheck = state.favourites.find((item: IEpisode) => {
             return episode.id === item.id
         });
-        console.log(episodeCheck);
+
         let favWithoutEpisode;
         if (episodeCheck) {
             favWithoutEpisode = state.favourites.filter((item: IEpisode) => {
@@ -20,7 +20,7 @@ const Card = (props: IEpisode) => {
             episodeCheck && {type: 'REMOVE_FAV', payload: favWithoutEpisode},
             !episodeCheck && {type: 'ADD_FAV', payload: episode}
         );
-        console.log(objDispatch);
+
 
         return dispatch(objDispatch)
     }
