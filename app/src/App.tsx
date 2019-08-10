@@ -1,8 +1,8 @@
 import React from 'react';
 import {Store} from './Store'
-import Cards from "./Components/Cards";
 import Navbar from "./Components/Navbar";
 
+const CardsList = React.lazy(()=>import('./Components/Cards'));
 const App = (): JSX.Element => {
     const {state, dispatch} = React.useContext(Store);
 
@@ -24,7 +24,9 @@ const App = (): JSX.Element => {
         <>
             <section className="container">
                 <Navbar/>
-                <Cards/>
+                <React.Suspense fallback={<div>...Loading</div>}>
+                    <CardsList/>
+                </React.Suspense>
             </section>
         </>
     );
