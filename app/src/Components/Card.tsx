@@ -1,29 +1,10 @@
 import React from 'react';
 import {IEpisode} from "../interfaces";
-import {Store} from "../Store";
+import {Store} from "../Store/Store";
+import {toggleAction} from "../Store/Actions";
 
 const Card = (props: IEpisode) => {
 
-    function toggleAction(episode: any) {
-
-        const episodeCheck = state.favourites.find((item: IEpisode) => {
-            return episode.id === item.id
-        });
-
-        let favWithoutEpisode;
-        if (episodeCheck) {
-            favWithoutEpisode = state.favourites.filter((item: IEpisode) => {
-                return item.id !== episode.id
-            })
-        }
-        let objDispatch = Object.assign({},
-            episodeCheck && {type: 'REMOVE_FAV', payload: favWithoutEpisode},
-            !episodeCheck && {type: 'ADD_FAV', payload: episode}
-        );
-
-
-        return dispatch(objDispatch)
-    }
 
     const {state, dispatch} = React.useContext(Store);
 
@@ -36,7 +17,7 @@ const Card = (props: IEpisode) => {
                 Season:{season} Number {number}
                 <button
                     className="btn btn-dark"
-                    onClick={() => toggleAction(props)}
+                    onClick={() => toggleAction(state, dispatch, props)}
                 >
                     {
                         state.favourites.find((fav: IEpisode) => fav.id === id) ? 'UnFav' : 'Fav'

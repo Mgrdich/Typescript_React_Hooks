@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import {StoreProvider} from "./Store";
+import {StoreProvider} from "./Store/Store";
 import "bootstrap/dist/css/bootstrap.css";
 import {BrowserRouter} from "react-router-dom";
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import {IEpisode} from "../interfaces";
-import {Store} from "../Store";
+import {Store} from "../Store/Store";
 import Card from "./Card";
 
 const Cards = () => {

@@ -1,5 +1,5 @@
 import React from 'react'
-import {IState,IAction} from "./interfaces";
+import {IState,IAction} from "../interfaces";
 
 const initialState: IState = {
     episodes: [],
