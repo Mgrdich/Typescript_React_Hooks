@@ -4,6 +4,7 @@ import {Store} from "../Store/Store";
 import Card from "./Card";
 
 export const Fav = () => {
+
     const {state} = React.useContext(Store);
     console.log(state);
     return (
