@@ -16,7 +16,10 @@
     "typescript": "3.5.3"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "build:css": "node-sass src/Style -o src/ ",
+    "watch:css": "npm run build:css && node-sass src/ -o src/ -w -r",
+    "start": "npm-run-all -p watch:css start:js",
+    "start:js": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
