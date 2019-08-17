@@ -19,7 +19,7 @@
     "typescript": "3.5.3"
   },
   "scripts": {
-    "build:css": "node-sass src/Style -o src/ ",
+    "build:css": "node-sass src/Style/style.scss -o src/ ",
     "watch:css": "npm run build:css && node-sass src/ -o src/ -w -r",
     "start": "npm-run-all -p watch:css start:js",
     "start:js": "react-scripts start",
