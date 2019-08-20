@@ -4,6 +4,7 @@ import App from './App';
 import {StoreProvider} from "./Store/Store";
 import "bootstrap/dist/css/bootstrap.css";
 import {BrowserRouter} from "react-router-dom";
+import "../src/Style/style.css"
 
 
 
