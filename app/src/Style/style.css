@@ -3,5 +3,16 @@ html body {
   height: 100%;
   width: 100%; }
 
-html body p {
-  background-color: blue; }
+html body .main_header {
+  color: #c1c1c1; }
+
+html body .special_card {
+  background-color: transparent;
+  border: 1px solid #c1c1c1;
+  position: relative; }
+
+html body .special_card .card_header {
+  color: #c1c1c1; }
+
+html body .special_card .card_body {
+  color: #c1c1c1; }

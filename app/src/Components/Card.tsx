@@ -10,10 +10,10 @@ const Card = (props: IEpisode) => {
 
     const {id, name, season, number, image} = props;
     return (
-        <div className="card col-lg-4 col-md-6 col-sm-12" key={id}>
+        <div className="card special_card col-lg-4 col-md-6 col-sm-12" key={id}>
             <img src={image.medium} alt={`Rick and Morty ${name}`}/>
-            <div>{name}</div>
-            <div>
+            <div className="card_header">{name}</div>
+            <div className="card_body">
                 Season:{season} Number {number}
                 <button
                     className="btn btn-dark"

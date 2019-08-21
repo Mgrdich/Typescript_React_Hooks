@@ -1,13 +1,26 @@
+$white_text:#c1c1c1;
+
 html {
   body {
     background-image: url("src/background.svg");
     height: 100%;
     width: 100%;
-
-
-    p {
-      background-color: blue;
+    .main_header {
+      color:$white_text;
     }
+    .special_card {
+      background-color: transparent;
+      border: 1px solid $white_text;
+      position: relative;
+      .card_ {
+        &header {
+          color:$white_text;
+        }
+        &body {
+          color: $white_text;
+        }
+      }
 
+    }
   }
 }
