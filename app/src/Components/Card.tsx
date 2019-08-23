@@ -16,7 +16,7 @@ const Card = (props: IEpisode) => {
             <div className="card_body">
                 Season:{season} Number {number}
                 <button
-                    className="btn btn-dark"
+                    className="btn btns"
                     onClick={() => toggleAction(state, dispatch, props)}
                 >
                     {

@@ -1,4 +1,4 @@
-$white_text:#c1c1c1;
+
 
 html {
   body {
@@ -22,5 +22,16 @@ html {
       }
 
     }
+  }
+}
+
+.btns {
+  background-color: #441222;
+  border: 1px solid #441222;
+  color:$white_text;
+  &:hover,&:active {
+    color: darken($white_text,10);
+    background-color: lighten(#441222,10);
+    border-color: lighten(#441222,10);
   }
 }

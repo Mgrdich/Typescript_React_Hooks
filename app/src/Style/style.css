@@ -16,3 +16,13 @@ html body .special_card .card_header {
 
 html body .special_card .card_body {
   color: #c1c1c1; }
+
+.btns {
+  background-color: #441222;
+  border: 1px solid #441222;
+  color: #c1c1c1; }
+
+.btns:hover, .btns:active {
+  color: #a8a8a8;
+  background-color: #6c1d36;
+  border-color: #6c1d36; }

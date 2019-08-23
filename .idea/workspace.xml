@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b88722a-7669-4c88-ab21-489144283650" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/Style/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/Style/_fonts.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/Components/Card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Components/Card.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/Style/_home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Style/_home.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Style/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Style/_variables.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/Style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Style/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/Style/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Style/style.scss" afterDir="false" />
     </list>
@@ -23,28 +24,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/index.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/interfaces.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="25" selection-start-column="17" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/Style/style.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="38">
-              <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+              <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -58,17 +41,31 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/Style/_home.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+            <state relative-caret-position="626">
+              <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/Style/src/background.svg">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/Style/_variables.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="20" selection-start-column="20" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/Style/_fonts.scss">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
@@ -76,7 +73,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/Components/Cards.tsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="209">
-              <caret line="11" column="74" lean-forward="true" selection-start-line="11" selection-start-column="74" selection-end-line="11" selection-end-column="74" />
+              <caret line="11" column="74" selection-start-line="11" selection-start-column="74" selection-end-line="11" selection-end-column="74" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -87,8 +84,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/Components/Card.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+            <state relative-caret-position="570">
+              <caret line="30" column="20" lean-forward="true" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -162,9 +159,10 @@
         <option value="$PROJECT_DIR$/app/src/Components/error.tsx" />
         <option value="$PROJECT_DIR$/app/src/utility/History.ts" />
         <option value="$PROJECT_DIR$/app/src/Components/Navbar.tsx" />
+        <option value="$PROJECT_DIR$/app/src/Style/_variables.scss" />
+        <option value="$PROJECT_DIR$/app/src/Style/style.scss" />
         <option value="$PROJECT_DIR$/app/src/Components/Card.tsx" />
         <option value="$PROJECT_DIR$/app/src/Style/_home.scss" />
-        <option value="$PROJECT_DIR$/app/src/Style/style.scss" />
       </list>
     </option>
   </component>
@@ -245,13 +243,13 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/app/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/Style/src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/src/Style" />
       <recent name="$PROJECT_DIR$/app/src" />
       <recent name="$PROJECT_DIR$/app/src/Store" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/src/Style/src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -290,18 +288,19 @@
       <workItem from="1566059994356" duration="5529000" />
       <workItem from="1566116282657" duration="599000" />
       <workItem from="1566319884174" duration="6635000" />
-      <workItem from="1566414954343" duration="752000" />
+      <workItem from="1566414954343" duration="803000" />
+      <workItem from="1566582166223" duration="1517000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44837000" />
+    <option name="totallyTimeSpent" value="46405000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="959" height="1052" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33263817" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3388947" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -315,7 +314,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="TypeScript" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.10504202" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.13235295" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -411,9 +410,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/Style/home.css" />
-    <entry file="file://$PROJECT_DIR$/app/src/Style/src/background.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/App.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
@@ -436,10 +432,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/node_modules/@types/history/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1596">
+          <caret line="92" column="29" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="29" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/node_modules/@types/history/createBrowserHistory.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/interfaces.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="25" selection-start-column="17" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -460,25 +482,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/node_modules/@types/history/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1596">
-          <caret line="92" column="29" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="29" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/node_modules/@types/history/createBrowserHistory.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/Components/error.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -486,17 +489,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/interfaces.ts">
+    <entry file="file://$PROJECT_DIR$/app/src/Style/src/background.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Style/_variables.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="25" selection-start-column="17" selection-end-column="25" />
+          <caret column="20" selection-start-column="20" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Style/_fonts.scss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Style/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/Components/Cards.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
-          <caret line="11" column="74" lean-forward="true" selection-start-line="11" selection-start-column="74" selection-end-line="11" selection-end-column="74" />
+          <caret line="11" column="74" selection-start-line="11" selection-start-column="74" selection-end-line="11" selection-end-column="74" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -505,8 +521,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/Components/Card.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+        <state relative-caret-position="570">
+          <caret line="30" column="20" lean-forward="true" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -515,18 +531,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/Style/_home.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Style/_variables.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Style/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+        <state relative-caret-position="626">
+          <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
         </state>
       </provider>
     </entry>
