@@ -1,23 +1,32 @@
-
+* {
+  font-family: 'Quicksand', sans-serif;;
+}
 
 html {
   body {
     background-image: url("src/background.svg");
     height: 100%;
     width: 100%;
+
     .main_header {
-      color:$white_text;
+      color: $white_text;
     }
+
     .special_card {
       background-color: transparent;
       border: 1px solid $white_text;
       position: relative;
+
       .card_ {
         &header {
-          color:$white_text;
+          color: $white_text;
+          font-weight: 600;
+          font-size: 20px
         }
+
         &body {
           color: $white_text;
+          font-size: 18px;
         }
       }
 
@@ -28,10 +37,12 @@ html {
 .btns {
   background-color: #441222;
   border: 1px solid #441222;
-  color:$white_text;
-  &:hover,&:active {
-    color: darken($white_text,10);
-    background-color: lighten(#441222,10);
-    border-color: lighten(#441222,10);
+  color: $white_text;
+  font-weight: 600;
+
+  &:hover, &:active {
+    color: darken($white_text, 10);
+    background-color: lighten(#441222, 10);
+    border-color: lighten(#441222, 10);
   }
 }

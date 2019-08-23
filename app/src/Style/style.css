@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,600,700&display=swap");
+* {
+  font-family: 'Quicksand', sans-serif; }
+
 html body {
   background-image: url("src/background.svg");
   height: 100%;
@@ -12,15 +16,19 @@ html body .special_card {
   position: relative; }
 
 html body .special_card .card_header {
-  color: #c1c1c1; }
+  color: #c1c1c1;
+  font-weight: 600;
+  font-size: 20px; }
 
 html body .special_card .card_body {
-  color: #c1c1c1; }
+  color: #c1c1c1;
+  font-size: 18px; }
 
 .btns {
   background-color: #441222;
   border: 1px solid #441222;
-  color: #c1c1c1; }
+  color: #c1c1c1;
+  font-weight: 600; }
 
 .btns:hover, .btns:active {
   color: #a8a8a8;
