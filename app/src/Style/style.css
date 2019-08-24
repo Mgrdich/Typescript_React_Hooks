@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand:400,600,700&display=swap");
 * {
-  font-family: 'Quicksand', sans-serif; }
+  font-family: 'Quicksand', sans-serif;
+  color: #c1c1c1; }
 
 html body {
   background-image: url("src/background.svg");
@@ -34,3 +35,39 @@ html body .special_card .card_body {
   color: #a8a8a8;
   background-color: #6c1d36;
   border-color: #6c1d36; }
+
+.Favourites {
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  text-align: center; }
+
+.Favourites .header {
+  font-size: 60px; }
+
+.Favourites .btns {
+  height: 46px;
+  width: 160px;
+  font-size: 26px;
+  text-align: center; }
+
+.myNavbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem; }
+
+.myNavbar .main-header {
+  text-align: center; }
+
+.myNavbar .nav-link {
+  color: #c1c1c1;
+  font-size: 23px;
+  font-weight: 600;
+  outline: none; }
+
+.myNavbar .nav-link:hover, .myNavbar .nav-link:active {
+  color: #58172c; }

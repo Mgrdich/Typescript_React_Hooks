@@ -6,7 +6,14 @@ import Card from "./Card";
 export const Fav = () => {
 
     const {state} = React.useContext(Store);
-    console.log(state);
+    if(state.favourites.length===0){
+        return (
+            <div className="Favourites">
+                <div className="header">No Fav has been used</div>
+                <button className="btns">Home</button>
+            </div>
+        )
+    }
     return (
         <div className="row">
             {

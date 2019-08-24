@@ -1,5 +1,6 @@
 * {
-  font-family: 'Quicksand', sans-serif;;
+  font-family: 'Quicksand', sans-serif;
+  color: $white_text;
 }
 
 html {
@@ -35,14 +36,33 @@ html {
 }
 
 .btns {
-  background-color: #441222;
-  border: 1px solid #441222;
+  background-color: $btn-color;
+  border: 1px solid $btn-color;
   color: $white_text;
   font-weight: 600;
 
   &:hover, &:active {
     color: darken($white_text, 10);
-    background-color: lighten(#441222, 10);
-    border-color: lighten(#441222, 10);
+    background-color: lighten($btn-color, 10);
+    border-color: lighten($btn-color, 10);
   }
 }
+
+.Favourites {
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  text-align: center;
+  .header {
+    font-size: 60px;
+  }
+
+  .btns {
+    height: 46px;
+    width: 160px;
+    font-size: 26px;
+    text-align: center;
+  }
+}
+
