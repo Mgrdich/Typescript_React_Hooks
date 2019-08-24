@@ -5,7 +5,7 @@ import Card from "./Card";
 
 const Cards = () => {
     const {state} = React.useContext(Store);
-    console.log(state);
+
     return (
         <div className="row">
             {

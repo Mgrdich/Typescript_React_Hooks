@@ -29,7 +29,9 @@ html body .special_card .card_body {
   background-color: #441222;
   border: 1px solid #441222;
   color: #c1c1c1;
-  font-weight: 600; }
+  font-weight: 600;
+  outline: none;
+  cursor: pointer; }
 
 .btns:hover, .btns:active {
   color: #a8a8a8;
@@ -50,7 +52,7 @@ html body .special_card .card_body {
   height: 46px;
   width: 160px;
   font-size: 26px;
-  text-align: center; }
+  cursor: pointer; }
 
 .myNavbar {
   position: relative;

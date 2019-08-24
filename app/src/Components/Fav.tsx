@@ -10,7 +10,7 @@ export const Fav = () => {
         return (
             <div className="Favourites">
                 <div className="header">No Fav has been used</div>
-                <button className="btns">Home</button>
+                <div className="btns">Home</div>
             </div>
         )
     }

@@ -40,6 +40,9 @@ html {
   border: 1px solid $btn-color;
   color: $white_text;
   font-weight: 600;
+  outline: none;
+  cursor: pointer;
+
 
   &:hover, &:active {
     color: darken($white_text, 10);
@@ -54,6 +57,7 @@ html {
   top: 50%;
   position: absolute;
   text-align: center;
+
   .header {
     font-size: 60px;
   }
@@ -62,7 +66,7 @@ html {
     height: 46px;
     width: 160px;
     font-size: 26px;
-    text-align: center;
+    cursor: pointer;
   }
 }
 
