@@ -65,6 +65,10 @@ html body .special_card .card_body {
 .myNavbar .main-header {
   text-align: center; }
 
+.myNavbar .main-header-image img {
+  height: 78px;
+  width: 261px; }
+
 .myNavbar .nav-link {
   color: #c1c1c1;
   font-size: 23px;

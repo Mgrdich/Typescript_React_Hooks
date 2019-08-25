@@ -5,15 +5,25 @@
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem;
+
   .main-header {
     text-align: center;
   }
+
+  .main-header-image {
+    img {
+      height: 78px;
+      width: 261px;
+    }
+  }
+
   .nav-link {
-    color:$white_text;
+    color: $white_text;
     font-size: 23px;
     font-weight: 600;
     outline: none;
-    &:hover,&:active {
+
+    &:hover, &:active {
       color: $text_hover;
     }
   }
