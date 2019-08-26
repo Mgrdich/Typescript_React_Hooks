@@ -7,6 +7,5 @@ export function randomItemArray(arr: string[]) {
 }
 
 export function RandomNumber(minimum: number, maximum: number): number {
-
     return Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 }

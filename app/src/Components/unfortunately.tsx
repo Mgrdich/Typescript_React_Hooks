@@ -3,7 +3,7 @@ import {randomItemArray} from "../utility/functions";
 
 const Unfortunately = (props:{title:string,mainClass:string,customStuff:any}):JSX.Element => {
 
-    const {customStuff,mainClass} = props;
+    const {customStuff, mainClass} = props;
     return (
         <div className={mainClass}>
             <div className="header_pic"><img src={randomItemArray(customStuff.arrayPic)} alt=""/></div>

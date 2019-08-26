@@ -13,7 +13,7 @@ export const Fav = (): JSX.Element => {
     const {state} = React.useContext(Store);
     if (state.favourites.length === 0) {
         return (
-            <Unfortunately mainClass="Favourites" customStuff={arrayPic} title="No Fav has been used"/>
+            <Unfortunately mainClass="Favourites" customStuff={{arrayPic}} title="No Fav has been used"/>
         )
     }
     return (

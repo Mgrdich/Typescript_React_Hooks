@@ -38,22 +38,22 @@ html body .special_card .card_body {
   background-color: #6c1d36;
   border-color: #6c1d36; }
 
-.Favourites {
+.Favourites, .error {
   transform: translate(-50%, -50%);
   left: 50%;
   top: 50%;
   position: absolute;
   text-align: center; }
 
-.Favourites .header_pic img {
+.Favourites .header_pic img, .error .header_pic img {
   height: 300px;
   width: 300px;
   cursor: pointer; }
 
-.Favourites .header {
+.Favourites .header, .error .header {
   font-size: 60px; }
 
-.Favourites .btns {
+.Favourites .btns, .error .btns {
   height: 46px;
   width: 160px;
   font-size: 26px;
