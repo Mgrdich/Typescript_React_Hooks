@@ -57,7 +57,13 @@ html {
   top: 50%;
   position: absolute;
   text-align: center;
-
+  .header_pic {
+    img {
+      height: 300px;
+      width: 300px;
+      cursor: pointer;
+    }
+  }
   .header {
     font-size: 60px;
   }
@@ -66,6 +72,7 @@ html {
     height: 46px;
     width: 160px;
     font-size: 26px;
+    margin: 0 auto;
     cursor: pointer;
   }
 }

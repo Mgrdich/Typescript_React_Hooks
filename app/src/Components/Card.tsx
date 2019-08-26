@@ -3,7 +3,7 @@ import {IEpisode} from "../interfaces";
 import {Store} from "../Store/Store";
 import {toggleAction} from "../Store/Actions";
 
-const Card = (props: IEpisode) => {
+const Card = (props: IEpisode):JSX.Element => {
 
 
     const {state, dispatch} = React.useContext(Store);

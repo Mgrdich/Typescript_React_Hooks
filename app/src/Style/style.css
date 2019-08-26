@@ -45,6 +45,11 @@ html body .special_card .card_body {
   position: absolute;
   text-align: center; }
 
+.Favourites .header_pic img {
+  height: 300px;
+  width: 300px;
+  cursor: pointer; }
+
 .Favourites .header {
   font-size: 60px; }
 
@@ -52,6 +57,7 @@ html body .special_card .card_body {
   height: 46px;
   width: 160px;
   font-size: 26px;
+  margin: 0 auto;
   cursor: pointer; }
 
 .myNavbar {
@@ -59,11 +65,14 @@ html body .special_card .card_body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem 1rem; }
+  justify-content: space-between; }
 
 .myNavbar .main-header {
   text-align: center; }
+
+.myNavbar .main-header-image img {
+  height: 78px;
+  width: 261px; }
 
 .myNavbar .nav-link {
   color: #c1c1c1;

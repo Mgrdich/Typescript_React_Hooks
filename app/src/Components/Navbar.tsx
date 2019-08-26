@@ -3,7 +3,7 @@ import {NavLink} from "react-router-dom";
 import {createBrowserHistory} from "history";
 import logo from "../Style/src/logo.svg"
 
-export const Navbar = (props: any) => {
+export const Navbar = (props: any):JSX.Element => {
     console.log(createBrowserHistory());
     return (
         <div className="myNavbar">
