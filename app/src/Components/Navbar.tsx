@@ -1,14 +1,17 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
-import {createBrowserHistory} from "history";
+import history from "../utility/history";
 import logo from "../Style/src/logo.svg"
 
 export const Navbar = (props: any):JSX.Element => {
-    console.log(createBrowserHistory());
     return (
         <div className="myNavbar">
             <div className="main-header-image">
-                <img src={logo} alt=""/>
+                <img
+                    src={logo}
+                    alt=""
+                    onClick={()=>history.push("/")}
+                />
             </div>
             <NavLink className="nav-link" to="/Favourites">FAV</NavLink>
         </div>

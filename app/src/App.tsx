@@ -10,12 +10,12 @@ export default function App(): JSX.Element {
         <>
             <section className="container">
                 <Navbar/>
-                <Switch>
-                    <Route path="/Favourites" component={Fav}/>
-                    <Route path="/" exact component={Home}/>
-                    <Route path="/404" component={error} />
-                    <Redirect to="/404" />
-                </Switch>
+                    <Switch>
+                        <Route path="/Favourites" component={Fav}/>
+                        <Route path="/" exact component={Home}/>
+                        <Route path="/404" component={error}/>
+                        <Redirect to="/404"/>
+                    </Switch>
             </section>
         </>
     );

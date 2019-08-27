@@ -72,7 +72,8 @@ html body .special_card .card_body {
 
 .myNavbar .main-header-image img {
   height: 78px;
-  width: 261px; }
+  width: 261px;
+  cursor: pointer; }
 
 .myNavbar .nav-link {
   color: #c1c1c1;
