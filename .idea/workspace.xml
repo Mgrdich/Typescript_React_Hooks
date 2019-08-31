@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b88722a-7669-4c88-ab21-489144283650" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/Store/asyncHooks.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/fakeData/data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Components/error.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Components/error.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Components/unfortunately.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Components/unfortunately.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Store/asyncHooks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Store/asyncHooks.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -307,18 +303,18 @@
       <workItem from="1566847371458" duration="2867000" />
       <workItem from="1566934992086" duration="3581000" />
       <workItem from="1567011415705" duration="1396000" />
-      <workItem from="1567235581212" duration="1301000" />
+      <workItem from="1567235581212" duration="2796000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60925000" />
+    <option name="totallyTimeSpent" value="62420000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="959" height="1052" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11053181" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25964546" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -332,7 +328,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="TypeScript" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.17857143" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.17857143" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />

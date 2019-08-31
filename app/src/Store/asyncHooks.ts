@@ -15,6 +15,6 @@ export const useAsyncActions = (action: any) => {
             setLoading(false);
         }
     };
-    return [{loading, data, error}];
+    return [{loading, data, error}, performAction];
 };
 
