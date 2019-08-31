@@ -5,7 +5,12 @@ import {arrayPic} from "../utility/Globals";
 
 const Error = () => {
     return (
-        <Unfortunately title="404 Page is not Found" mainClass="error" customStuff={{arrayPic}} />
+        <Unfortunately
+            title="404 Page is not Found"
+            mainClass="error"
+            customStuff={{arrayPic}}
+
+        />
     );
 };
 

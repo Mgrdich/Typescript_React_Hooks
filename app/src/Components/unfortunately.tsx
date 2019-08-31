@@ -6,6 +6,7 @@ interface IProps {
     mainClass: string,
     customStuff: any
     children?:JSX.Element | null
+    render?:any
 }
 
 const Unfortunately = (props: IProps): JSX.Element => {
