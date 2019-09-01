@@ -19,7 +19,7 @@ function reducers(state: any, action: IAction): IState {
         case 'REMOVE_FAV':
             return {...state,favourites:action.payload};
         case "FETCH_FILTERS":
-            return {...state, filters: true};
+            return {...state, filters:action.payload};
         default:
             return state;
     }

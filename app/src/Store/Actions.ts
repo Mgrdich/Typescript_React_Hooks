@@ -1,6 +1,6 @@
 import {IEpisode, IState} from "../interfaces";
 import {fetchAPI} from "../utility/functions";
-import DataJson from "../fakeData/data.json"
+import DataJson from "../api/data.json"
 
 
 export async function fetchDataAction(dispatch: any) {
@@ -35,8 +35,9 @@ export function toggleAction(state: IState, dispatch: any, episode: any) {
 }
 
 export async function fetchDataFilers(dispatch:any) {
+    // const dataJSON  = await fetchAPI("/api/data.json");
     const dataJSON = await DataJson;
-    console.log("getting called");
+    console.log(dataJSON);
     return dispatch({
         type: 'FETCH_FILTERS',
         payload: dataJSON
