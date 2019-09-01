@@ -15,3 +15,9 @@ export function toggleHeads (arr:string[],selectedItem:string):string {
     });
     return randomItemArray(newFilteredArray);
 }
+
+export async function fetchAPI(URL:string) {
+    const data = await fetch(URL);
+    const dataJSON = await data.json();
+    return dataJSON;
+}

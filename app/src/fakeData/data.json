@@ -1,8 +1,12 @@
 [
   {
-
+    "field": "seasons",
+    "type": "checkbox",
+    "name": "seasons"
   },
   {
-
+    "field": "episodes",
+    "type": "checkbox",
+    "name": "episodes"
   }
 ]

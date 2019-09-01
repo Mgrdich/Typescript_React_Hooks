@@ -1,15 +1,16 @@
 import {IEpisode, IState} from "../interfaces";
+import {fetchAPI} from "../utility/functions";
+import DataJson from "../fakeData/data.json"
 
 
 export async function fetchDataAction(dispatch: any) {
-    const URL = 'https://api.tvmaze.com/singlesearch/shows?q=rick-&-morty&embed=episodes';
-    const data = await fetch(URL);
-    const dataJSON = await data.json();
+    const dataJSON = await fetchAPI('https://api.tvmaze.com/singlesearch/shows?q=rick-&-morty&embed=episodes');
     return dispatch({
         type: 'FETCH_DATA',
         payload: dataJSON._embedded.episodes
     });
 };
+
 
 
 export function toggleAction(state: IState, dispatch: any, episode: any) {
@@ -31,4 +32,13 @@ export function toggleAction(state: IState, dispatch: any, episode: any) {
 
 
     return dispatch(objDispatch)
+}
+
+export async function fetchDataFilers(dispatch:any) {
+    const dataJSON = await DataJson;
+    console.log("getting called");
+    return dispatch({
+        type: 'FETCH_FILTERS',
+        payload: dataJSON
+    });
 }
