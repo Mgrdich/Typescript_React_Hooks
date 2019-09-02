@@ -37,7 +37,6 @@ export function toggleAction(state: IState, dispatch: any, episode: any) {
 export async function fetchDataFilers(dispatch:any) {
     // const dataJSON  = await fetchAPI("/api/data.json");
     const dataJSON = await DataJson;
-    console.log(dataJSON);
     return dispatch({
         type: 'FETCH_FILTERS',
         payload: dataJSON

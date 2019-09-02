@@ -26,5 +26,8 @@ export interface IAction {
     payload: any
 }
 
+export interface IPropsCheckboxList {
+    Array:Array<any>,
 
+}
 
