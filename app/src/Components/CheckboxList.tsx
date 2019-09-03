@@ -32,7 +32,7 @@ const CheckboxList = (props: IPropsCheckboxList): JSX.Element => {
 
     return (
         <div className={`dropdown`} id="valueItemDrop">
-            <button className="selectbox" onClick={() => Changedropdown(!dropdown)}>
+            <button className="selectbox" onClick={() => Changedropdown(!dropdown)} onBlur={()=>Changedropdown(!dropdown)}>
                 Filter
             </button>
             {renderDropdown(dropdown)}

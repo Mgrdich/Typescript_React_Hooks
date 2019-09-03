@@ -26,8 +26,13 @@ export interface IAction {
     payload: any
 }
 
+type ArrayObjectCheckbox = {
+    "field": string,
+    "type": string,
+    "name": string,
+    "id": number|string
+} ;
 export interface IPropsCheckboxList {
-    Array:Array<any>,
-
+    Array:Array<ArrayObjectCheckbox>
 }
 
