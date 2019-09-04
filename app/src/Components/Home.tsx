@@ -1,12 +1,14 @@
 import React from 'react';
 import {Store} from "../Store/Store";
 import {fetchDataAction,fetchDataFilers} from "../Store/Actions";
-import CheckboxList from "./CheckboxList";
+import Select from "./Select";
+
 
 
 const CardsList = React.lazy(() => import('./Cards'));
 export const Home = (): JSX.Element => {
     const {state, dispatch} = React.useContext(Store);
+
     React.useEffect(() => {
         state.episodes.length === 0 && fetchDataAction(dispatch);
         !state.filters && fetchDataFilers(dispatch);
@@ -16,7 +18,7 @@ export const Home = (): JSX.Element => {
     return (
         <>
             <React.Suspense fallback={<div>...Loading</div>}>
-                <CheckboxList Array={state.filters}/>
+                {state.filters ? <Select Array={state.filters} placeholder="Filters"/> : null}
                 <CardsList/>
             </React.Suspense>
         </>

@@ -32,7 +32,9 @@ type ArrayObjectCheckbox = {
     "name": string,
     "id": number|string
 } ;
-export interface IPropsCheckboxList {
-    Array:Array<ArrayObjectCheckbox>
+export interface IPropsSelect {
+    Array:Array<ArrayObjectCheckbox>,
+    placeholder:string,
+    multiple?:boolean
 }
 
