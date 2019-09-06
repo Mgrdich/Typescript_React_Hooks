@@ -1,7 +1,8 @@
 import React from 'react';
-import {fetchDataFilers} from "../Store/Actions";
+import {fetchDataFilers, MapIdArray} from "../Store/Actions";
 import {Store} from "../Store/Store";
 import Select from "./Select";
+import {mapIdObjectArray} from "../utility/functions";
 
 const AdvanceFilters = () => {
     const {state, dispatch} = React.useContext(Store);
@@ -10,6 +11,10 @@ const AdvanceFilters = () => {
         fetchDataFilers(dispatch);
     }, [state.filters.length]);
 
+    React.useEffect(() => {
+        MapIdArray(dispatch, mapIdObjectArray(state.filters));
+    }, [state.episodes.length]);
+    console.log(state);
     if (state.filters.length) {
         return (
             <>

@@ -42,3 +42,10 @@ export async function fetchDataFilers(dispatch:any) {
         payload: dataJSON
     });
 }
+
+export function MapIdArray(dispatch:any,obj:any) {
+    return dispatch({
+        type:'MAP_ID',
+        payload:obj
+    })
+}

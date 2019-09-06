@@ -1,10 +1,10 @@
 import React from 'react'
-import {IState,IAction} from "../interfaces";
+import {IState, IAction} from "../interfaces";
 
 const initialState: IState = {
     episodes: [],
     favourites: [],
-    filters:[]
+    filters: []
 };
 
 
@@ -16,11 +16,13 @@ function reducers(state: any, action: IAction): IState {
         case 'FETCH_DATA':
             return {...state, episodes: action.payload};
         case 'ADD_FAV':
-            return {...state,favourites:[...state.favourites,action.payload]};
+            return {...state, favourites: [...state.favourites, action.payload]};
         case 'REMOVE_FAV':
-            return {...state,favourites:action.payload};
+            return {...state, favourites: action.payload};
         case "FETCH_FILTERS":
-            return {...state, filters:action.payload};
+            return {...state, filters: action.payload};
+        case "MAP_ID":
+            return {...state, hashEpisodes: action.payload};
         default:
             return state;
     }

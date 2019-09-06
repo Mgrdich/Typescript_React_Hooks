@@ -9,7 +9,6 @@ const Select = (props: IPropsSelect) => {
         event.preventDefault();
         ChangeSelect(event.target.value);
     };
-    console.log(valueSelect);
     return (
         <div className="form-group">
             <select

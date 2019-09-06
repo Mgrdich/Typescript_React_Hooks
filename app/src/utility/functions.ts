@@ -1,3 +1,5 @@
+import {ArrayObjectCheckbox} from "../interfaces";
+
 export function randomItemArray(arr: string[]):string {
     let arrLength = arr.length;
     let index = RandomNumber(0, arrLength - 1);
@@ -20,4 +22,18 @@ export async function fetchAPI(URL:string) {
     const data = await fetch(URL);
     const dataJSON = await data.json();
     return dataJSON;
+}
+
+
+export function mapIdObjectArray(Array:Array<ArrayObjectCheckbox>) {
+    let newObj = Array.reduce((acc: any, currentValue: ArrayObjectCheckbox) => {
+        const obj = {
+            [currentValue.id]:{
+               ...currentValue
+            },
+            ...acc
+        };
+        return obj;
+    }, {});
+    return newObj;
 }
