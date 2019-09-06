@@ -18,7 +18,8 @@ export interface IEpisode {
 /*-------------Store.tsx interfaces-------------*/
 export interface IState {
     episodes: Array<any>
-    favourites: Array<any>
+    favourites: Array<any>,
+    filters:Array<any>
 }
 
 export interface IAction {

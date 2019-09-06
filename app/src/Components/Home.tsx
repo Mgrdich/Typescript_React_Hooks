@@ -10,15 +10,18 @@ export const Home = (): JSX.Element => {
     const {state, dispatch} = React.useContext(Store);
 
     React.useEffect(() => {
-        state.episodes.length === 0 && fetchDataAction(dispatch);
-        !state.filters && fetchDataFilers(dispatch);
-    });
+        fetchDataAction(dispatch);
+    },[state.episodes.length]);
+
+    React.useEffect(()=>{
+        fetchDataFilers(dispatch);
+    },[state.filters.length]);
 
     console.log(state);
     return (
         <>
             <React.Suspense fallback={<div>...Loading</div>}>
-                {state.filters ? <Select Array={state.filters} placeholder="Filters"/> : null}
+                {state.filters.length ? <Select Array={state.filters} placeholder="Filters"/> : null}
                 <CardsList/>
             </React.Suspense>
         </>

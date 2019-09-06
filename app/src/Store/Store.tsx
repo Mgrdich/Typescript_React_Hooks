@@ -3,7 +3,8 @@ import {IState,IAction} from "../interfaces";
 
 const initialState: IState = {
     episodes: [],
-    favourites: []
+    favourites: [],
+    filters:[]
 };
 
 
