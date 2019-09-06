@@ -83,3 +83,18 @@ html body .special_card .card_body {
 
 .myNavbar .nav-link:hover, .myNavbar .nav-link:active {
   color: #58172c; }
+
+select {
+  max-width: 200px; }
+
+/*custom css*/
+.Flexbox {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px; }
+
+.Flexbox .flex-item {
+  padding-left: 15px;
+  padding-right: 15px; }

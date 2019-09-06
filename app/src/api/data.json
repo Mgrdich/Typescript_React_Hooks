@@ -1,5 +1,11 @@
 [
   {
+    "field": "All",
+    "type": "checkbox",
+    "name": "All",
+    "id": "All111"
+  }
+  ,{
     "field": "seasons",
     "type": "checkbox",
     "name": "seasons",

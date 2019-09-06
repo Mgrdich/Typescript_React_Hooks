@@ -36,6 +36,7 @@ type ArrayObjectCheckbox = {
 export interface IPropsSelect {
     Array:Array<ArrayObjectCheckbox>,
     placeholder:string,
-    multiple?:boolean
+    multiple?:boolean,
+    className?:string
 }
 
