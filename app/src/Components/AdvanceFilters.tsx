@@ -9,12 +9,13 @@ const AdvanceFilters = () => {
 
     React.useEffect(() => {
         fetchDataFilers(dispatch);
-    }, [state.filters.length]);
+    }, []);
 
     React.useEffect(() => {
         MapIdArray(dispatch, mapIdObjectArray(state.filters));
-    }, [state.episodes.length]);
-    console.log(state);
+    }, []);
+
+
     if (state.filters.length) {
         return (
             <>

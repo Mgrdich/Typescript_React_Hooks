@@ -2,16 +2,17 @@ import React from 'react';
 import {Store} from "../Store/Store";
 import {fetchDataAction, MapIdArray} from "../Store/Actions";
 import AdvanceFilters from "./AdvanceFilters";
-import {mapIdObjectArray} from "../utility/functions";
 
 
 const CardsList = React.lazy(() => import('./Cards'));
+
 export const Home = (): JSX.Element => {
-    const {state, dispatch} = React.useContext(Store);
+    const {dispatch} = React.useContext(Store);
 
     React.useEffect(() => {
+        console.log("i am in");
         fetchDataAction(dispatch);
-    }, [state.episodes.length]);
+    }, []);
 
 
     return (

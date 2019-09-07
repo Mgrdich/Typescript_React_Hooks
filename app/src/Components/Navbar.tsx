@@ -5,7 +5,7 @@ import logo from "../Style/src/logo.svg"
 
 export const Navbar = (props: any):JSX.Element => {
     return (
-        <div className="myNavbar">
+        <div className="myNavbar m-b-20">
             <div className="main-header-image">
                 <img
                     src={logo}

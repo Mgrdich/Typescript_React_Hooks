@@ -87,7 +87,7 @@ html body .special_card .card_body {
 select {
   max-width: 200px; }
 
-/*custom css*/
+/*custom Flexbox*/
 .Flexbox {
   display: flex;
   align-items: flex-start;
@@ -98,3 +98,10 @@ select {
 .Flexbox .flex-item {
   padding-left: 15px;
   padding-right: 15px; }
+
+/*custom margin classes*/
+.m-t-20 {
+  margin-top: 20px; }
+
+.m-b-20 {
+  margin-bottom: 20px; }
