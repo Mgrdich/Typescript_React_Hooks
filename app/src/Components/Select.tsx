@@ -2,20 +2,16 @@ import React, {ChangeEvent, useState} from 'react';
 import {IPropsSelect} from "../interfaces";
 
 const Select = (props: IPropsSelect) => {
-    const {Array, multiple, className} = props;
-    const [valueSelect, ChangeSelect] = useState<any>("");
+    const {Array, multiple, className, value: valueSelect, handleChange} = props;
 
-    const handleChange = function (event: ChangeEvent<HTMLSelectElement>):any {
-        event.preventDefault();
-        ChangeSelect(event.target.value);
-    };
+
     return (
         <div className="form-group">
             <select
                 multiple={multiple}
                 className={`form-control ${className}`}
                 value={valueSelect}
-                onChange={(e) =>handleChange(e)}
+                onChange={(e) => handleChange(e)}
             >
                 <option value="" disabled={true} hidden={true}>Filter</option>
                 {

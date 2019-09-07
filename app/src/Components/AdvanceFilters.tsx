@@ -3,6 +3,7 @@ import {fetchDataFilers, MapIdArray} from "../Store/Actions";
 import {Store} from "../Store/Store";
 import Select from "./Select";
 import {mapIdObjectArray} from "../utility/functions";
+import {useSelect} from "../hooks/SelectHook";
 
 const AdvanceFilters = () => {
     const {state, dispatch} = React.useContext(Store);
@@ -16,10 +17,11 @@ const AdvanceFilters = () => {
     }, []);
 
 
+    const [valueSelect, handleChange] = useSelect();
     if (state.filters.length) {
         return (
             <>
-                <Select Array={state.filters} placeholder="Filters"/>
+                <Select Array={state.filters} placeholder="Filters" value={valueSelect} handleChange={handleChange}/>
             </>
         );
     } else {

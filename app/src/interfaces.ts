@@ -14,12 +14,11 @@ export interface IEpisode {
 }
 
 
-
 /*-------------Store.tsx interfaces-------------*/
 export interface IState {
     episodes: Array<any>
     favourites: Array<any>,
-    filters:Array<any>
+    filters: Array<any>
 }
 
 export interface IAction {
@@ -27,16 +26,18 @@ export interface IAction {
     payload: any
 }
 
-export interface ArrayObjectCheckbox  {
+export interface ArrayObjectCheckbox {
     "field": string,
     "type": string,
     "name": string,
-    "id": number|string
+    "id": number | string
 }
 
 export interface IPropsSelect {
-    Array:Array<ArrayObjectCheckbox>,
-    placeholder:string,
-    multiple?:boolean,
-    className?:string
+    Array: Array<ArrayObjectCheckbox>,
+    placeholder: string,
+    multiple?: boolean,
+    className?: string,
+    value?: string,
+    handleChange?: any
 }
