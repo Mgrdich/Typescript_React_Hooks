@@ -11,6 +11,13 @@ export async function fetchDataAction(dispatch: any) {
     });
 };
 
+export function getSeasons(dispatch: any) {
+    return dispatch({
+        type:'GET_SEASONS',
+        
+    });
+
+}
 
 
 export function toggleAction(state: IState, dispatch: any, episode: any) {
@@ -34,7 +41,7 @@ export function toggleAction(state: IState, dispatch: any, episode: any) {
     return dispatch(objDispatch)
 }
 
-export async function fetchDataFilers(dispatch:any) {
+export async function fetchDataFilers(dispatch: any) {
     // const dataJSON  = await fetchAPI("/api/data.json");
     const dataJSON = await DataJson;
     return dispatch({
@@ -43,9 +50,9 @@ export async function fetchDataFilers(dispatch:any) {
     });
 }
 
-export function MapIdArray(dispatch:any,obj:any) {
+export function MapIdArray(dispatch: any, obj: any) {
     return dispatch({
-        type:'MAP_ID',
-        payload:obj
+        type: 'MAP_ID',
+        payload: obj
     })
 }

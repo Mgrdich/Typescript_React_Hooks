@@ -1,4 +1,4 @@
-import React, {ChangeEvent, useState} from 'react';
+import React from 'react';
 import {IPropsSelect} from "../interfaces";
 
 const Select = (props: IPropsSelect) => {

@@ -23,6 +23,10 @@ function reducers(state: any, action: IAction): IState {
             return {...state, filters: action.payload};
         case "MAP_ID":
             return {...state, hashEpisodes: action.payload};
+        case "GET_SEASONS":
+            return  {...state,Info: {
+                    seasons:action.payload
+                }};
         default:
             return state;
     }
