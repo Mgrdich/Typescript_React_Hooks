@@ -10,7 +10,7 @@ const CardsList = React.lazy(() => import('./Cards'));
 export const Home = (): JSX.Element => {
     const {dispatch} = React.useContext(Store);
 
-    useFetch(fetchDataAction,dispatch);
+    useFetch(fetchDataAction, dispatch);
 
     return (
         <>

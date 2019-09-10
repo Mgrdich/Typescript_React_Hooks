@@ -6,10 +6,10 @@ const Select = (props: IPropsSelect) => {
 
 
     return (
-        <div className="form-group">
+        <div className={`form-group ${className}`}>
             <select
                 multiple={multiple}
-                className={`form-control ${className}`}
+                className={`form-control`}
                 value={valueSelect}
                 onChange={(e) => handleChange(e)}
             >
