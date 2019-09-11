@@ -18,7 +18,10 @@ export interface IEpisode {
 export interface IState {
     episodes: Array<any>
     favourites: Array<any>,
-    filters: Array<any>
+    filters: Array<any>,
+    Info: {
+        seasonsDrop: Array<any>
+    }
 }
 
 export interface IAction {

@@ -4,7 +4,8 @@ import {IState, IAction} from "../interfaces";
 const initialState: IState = {
     episodes: [],
     favourites: [],
-    filters: []
+    filters: [],
+    Info: {seasonsDrop: []}
 };
 
 
@@ -24,9 +25,14 @@ function reducers(state: any, action: IAction): IState {
         case "MAP_ID":
             return {...state, hashEpisodes: action.payload};
         case "GET_SEASONS":
-            return  {...state,Info: {
-                    seasons:action.payload
-                }};
+            return {
+                ...state, Info: {
+                    seasonsDrop: action.payload
+                }
+            };
+        case "GET_EPISODES": {
+            return {...state};
+        }
         default:
             return state;
     }

@@ -1,6 +1,7 @@
 import {IEpisode, IState} from "../interfaces";
 import {fetchAPI} from "../utility/functions";
 import DataJson from "../api/data.json"
+import {SelectObjectCreator} from "../utility/functions";
 
 
 export async function fetchDataAction(dispatch: any) {
@@ -15,7 +16,7 @@ export function getSeasons(dispatch: any,episodes:any) {
 
     return dispatch({
         type:'GET_SEASONS',
-        
+        payload:SelectObjectCreator(SeasonNumber(episodes), "season")
     });
 
 }
