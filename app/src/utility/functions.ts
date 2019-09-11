@@ -37,3 +37,13 @@ export function mapIdObjectArray(Array:Array<ArrayObjectCheckbox>) {
     }, {});
     return newObj;
 }
+
+
+export function SelectObjectCreator(length: Number, name: string) {
+    const Arrayobj: any = [];
+    for (let i = 0; i < length; i++) {
+        Arrayobj[i].id = `${name + i}`;
+        Arrayobj[i].name = `${i}`;
+    }
+    return Arrayobj;
+}

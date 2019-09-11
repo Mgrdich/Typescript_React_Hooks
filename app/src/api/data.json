@@ -1,19 +1,13 @@
 [
   {
-    "field": "All",
-    "type": "checkbox",
     "name": "All",
     "id": "All111"
   }
   ,{
-    "field": "seasons",
-    "type": "checkbox",
     "name": "seasons",
     "id": "seasons111"
   },
   {
-    "field": "episodes",
-    "type": "checkbox",
     "name": "episodes",
     "id": "episodes111"
   }

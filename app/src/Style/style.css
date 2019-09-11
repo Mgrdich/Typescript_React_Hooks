@@ -85,7 +85,8 @@ html body .special_card .card_body {
   color: #58172c; }
 
 select {
-  max-width: 200px; }
+  max-width: 200px;
+  cursor: pointer; }
 
 /*custom Flexbox*/
 .Flexbox {

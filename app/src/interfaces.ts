@@ -27,8 +27,6 @@ export interface IAction {
 }
 
 export interface ArrayObjectCheckbox {
-    "field": string,
-    "type": string,
     "name": string,
     "id": number | string
 }

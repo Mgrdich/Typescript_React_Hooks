@@ -11,7 +11,8 @@ export async function fetchDataAction(dispatch: any) {
     });
 };
 
-export function getSeasons(dispatch: any) {
+export function getSeasons(dispatch: any,episodes:any) {
+
     return dispatch({
         type:'GET_SEASONS',
         
@@ -36,8 +37,6 @@ export function toggleAction(state: IState, dispatch: any, episode: any) {
         episodeCheck && {type: 'REMOVE_FAV', payload: favWithoutEpisode},
         !episodeCheck && {type: 'ADD_FAV', payload: episode}
     );
-
-
     return dispatch(objDispatch)
 }
 
@@ -55,4 +54,8 @@ export function MapIdArray(dispatch: any, obj: any) {
         type: 'MAP_ID',
         payload: obj
     })
+}
+
+function SeasonNumber(episodes:any):Number{
+    return episodes[episodes.length - 1].season;
 }

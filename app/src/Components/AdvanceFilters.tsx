@@ -6,11 +6,10 @@ import {useSelect} from "../hooks/SelectHook";
 import {mapIdObjectArray} from "../utility/functions";
 import {useFetch} from "../hooks/FetchingHook";
 
-const AdvanceFilters = () => {
+const AdvanceFilters = ():JSX.Element => {
     const [valueSelect, handleChange] = useSelect();
     const [AdvancedFilter1, handleChange1] = useSelect();
     const [AdvancedFilter2, handleChange2] = useSelect();
-    const [AdvancedFilter3, handleChange3] = useSelect();
 
     const {state, dispatch} = React.useContext(Store);
 
@@ -20,7 +19,6 @@ const AdvanceFilters = () => {
         MapIdArray(dispatch, mapIdObjectArray(state.filters));
     }, [state.filters.length, dispatch, state.filters]);
 
-
     const DynamicFilters = function (value: any): JSX.Element {
 
         switch (value) {
@@ -28,10 +26,10 @@ const AdvanceFilters = () => {
                 return (
                     <>
                         <Select Array={[]} placeholder={state.hashEpisodes[value]} className="flex-item"
-                               value={AdvancedFilter1} handleChange={handleChange1}/>
+                                value={AdvancedFilter1} handleChange={handleChange1}/>
                         <Select Array={[]} placeholder={state.hashEpisodes[value]} className="flex-item"
                                 value={AdvancedFilter2} handleChange={handleChange2}/>
-                                </>
+                    </>
 
             );
             case "seasons111":

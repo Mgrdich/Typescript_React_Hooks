@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Store} from "../Store/Store";
 import {fetchDataAction} from "../Store/Actions";
 import AdvanceFilters from "./AdvanceFilters";
@@ -8,9 +8,17 @@ import {useFetch} from "../hooks/FetchingHook";
 const CardsList = React.lazy(() => import('./Cards'));
 
 export const Home = (): JSX.Element => {
-    const {dispatch} = React.useContext(Store);
+    const {state,dispatch} = React.useContext(Store);
 
-    useFetch(fetchDataAction, dispatch);
+    const {SeasonsDrop, episodesDrop} = state;
+    console.log(state);
+    useEffect(()=>{
+        console.log("working");
+
+    },[SeasonsDrop, episodesDrop]);
+
+    useFetch(fetchDataAction, dispatch); //TODO checking api call during every change of router
+
 
     return (
         <>
