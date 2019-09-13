@@ -20,32 +20,29 @@ export function toggleHeads(arr: string[], selectedItem: string): string {
 
 export async function fetchAPI(URL: string) {
     const data = await fetch(URL);
-    const dataJSON = await data.json();
-    return dataJSON;
+    return await data.json();
 }
 
 
 export function mapIdObjectArray(Array: Array<ArrayObjectCheckbox>) {
-    let newObj = Array.reduce((acc: any, currentValue: ArrayObjectCheckbox) => {
-        const obj = {
+    return Array.reduce((acc: any, currentValue: ArrayObjectCheckbox) => {
+        return  {
             [currentValue.id]: {
                 ...currentValue
             },
             ...acc
         };
-        return obj;
     }, {});
-    return newObj;
 }
 
 
 export function SelectObjectCreator(length: Number, name: string): Array<ArrayObjectCheckbox> {
-    const Arrayobj: any = [];
+    const arrayObj: any = [];
     for (let i = 1; i <= length; i++) {
         let currentObj: any = {};
         currentObj.id = `${name + i}`;
         currentObj.name = `${i}`;
-        Arrayobj.push(currentObj);
+        arrayObj.push(currentObj);
     }
-    return Arrayobj;
+    return arrayObj;
 }

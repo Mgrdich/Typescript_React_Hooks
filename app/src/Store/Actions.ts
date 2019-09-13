@@ -10,7 +10,7 @@ export async function fetchDataAction(dispatch: any) {
         type: 'FETCH_DATA',
         payload: dataJSON._embedded.episodes
     });
-};
+}
 
 export function getSeasons(dispatch: any,episodes:any) {
 
