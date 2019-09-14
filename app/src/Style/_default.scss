@@ -6,12 +6,17 @@
   margin-left: -15px;
   margin-right: -15px;
 
+  &.spaceBtwn {
+    justify-content: space-between;
+  }
   .flex-item {
     padding-left: 15px;
     padding-right: 15px;
+    display: flex;
     &:first-child {
       padding-left: 0;
     }
+
     &:last-child {
       padding-right: 0;
     }
@@ -26,4 +31,12 @@
 
 .m-b-20 {
   margin-bottom: 20px;
+}
+
+.m-r-15 {
+  margin-right: 15px;
+}
+
+.m-l-15 {
+  margin-left: 15px;
 }

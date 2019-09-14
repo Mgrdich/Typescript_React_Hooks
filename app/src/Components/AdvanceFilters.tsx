@@ -6,7 +6,7 @@ import {useSelect} from "../hooks/SelectHook";
 import {mapIdObjectArray} from "../utility/functions";
 import {useFetch} from "../hooks/FetchingHook";
 
-const AdvanceFilters = ():JSX.Element => {
+const AdvanceFilters = (): JSX.Element => {
     const [valueSelect, handleChange] = useSelect();
     const [AdvancedFilter1, handleChange1] = useSelect();
     const [AdvancedFilter2, handleChange2] = useSelect();
@@ -31,7 +31,7 @@ const AdvanceFilters = ():JSX.Element => {
                                 value={AdvancedFilter2} handleChange={handleChange2}/>
                     </>
 
-            );
+                );
             case "seasons111":
                 return (
                     <>
@@ -58,9 +58,18 @@ const AdvanceFilters = ():JSX.Element => {
 
     if (state.filters.length) {
         return (
-            <div className="Flexbox">
-                <Select Array={state.filters} placeholder="Filters" value={valueSelect} handleChange={handleChange} className="flex-item"/>
-                {DynamicFilters(valueSelect)}
+            <div className="Flexbox spaceBtwn">
+
+                <div className="flex-item">
+                    <Select Array={state.filters} placeholder="Filters" value={valueSelect}
+                            handleChange={handleChange}
+                            className="flex-item"/>
+                    {DynamicFilters(valueSelect)}
+                </div>
+                <div className="flex-item">
+                    <button className="btn btn-danger m-r-15">Submit</button>
+                    <button className="btn btns">Reset</button>
+                </div>
             </div>
         );
     } else {

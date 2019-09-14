@@ -96,9 +96,13 @@ select {
   margin-left: -15px;
   margin-right: -15px; }
 
+.Flexbox.spaceBtwn {
+  justify-content: space-between; }
+
 .Flexbox .flex-item {
   padding-left: 15px;
-  padding-right: 15px; }
+  padding-right: 15px;
+  display: flex; }
 
 .Flexbox .flex-item:first-child {
   padding-left: 0; }
@@ -112,3 +116,9 @@ select {
 
 .m-b-20 {
   margin-bottom: 20px; }
+
+.m-r-15 {
+  margin-right: 15px; }
+
+.m-l-15 {
+  margin-left: 15px; }

@@ -15,7 +15,7 @@ function reducers(state: any, action: IAction): IState {
 
     switch (action.type) {
         case 'FETCH_DATA':
-            return {...state, episodes: action.payload};
+            return {...state, episodes: action.payload ,filteredEpisodes:action.payload};
         case 'ADD_FAV':
             return {...state, favourites: [...state.favourites, action.payload]};
         case 'REMOVE_FAV':
