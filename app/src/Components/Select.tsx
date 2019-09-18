@@ -2,7 +2,7 @@ import React from 'react';
 import {IPropsSelect} from "../interfaces";
 
 const Select = (props: IPropsSelect) => {
-    const {Array, multiple, className, value: valueSelect, handleChange} = props;
+    const {Array, multiple, className, value: valueSelect, handleChange, placeholder} = props;
 
 
     return (
@@ -13,7 +13,7 @@ const Select = (props: IPropsSelect) => {
                 value={valueSelect}
                 onChange={(e) => handleChange(e)}
             >
-                <option value="" disabled={true} hidden={true}>Filter</option>
+                <option value="" disabled={true} hidden={true}>{placeholder}</option>
                 {
                     Array.map((item) => {
                         return (

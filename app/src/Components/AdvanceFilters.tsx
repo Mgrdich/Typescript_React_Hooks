@@ -21,29 +21,30 @@ const AdvanceFilters = (): JSX.Element => {
 
     const DynamicFilters = function (value: any): JSX.Element {
         const {seasonsDrop} = state.Info;
+        const Episodes: JSX.Element = <Select Array={[]} placeholder="Episodes" className="flex-item"
+                                              value={AdvancedFilter2} handleChange={handleChange2}/>;
+        const Seasons: JSX.Element = <Select Array={seasonsDrop} placeholder="Seasons" className="flex-item"
+                                             value={AdvancedFilter1} handleChange={handleChange1}/>;
+
         switch (value) {
             case "both111":
                 return (
                     <>
-                        <Select Array={seasonsDrop} placeholder={state.hashEpisodes[value]} className="flex-item"
-                                value={AdvancedFilter1} handleChange={handleChange1}/>
-                        <Select Array={[]} placeholder={state.hashEpisodes[value]} className="flex-item"
-                                value={AdvancedFilter2} handleChange={handleChange2}/>
+                        {Seasons}
+                        {Episodes}
                     </>
 
                 );
             case "seasons111":
                 return (
                     <>
-                        <Select Array={seasonsDrop} placeholder={state.hashEpisodes[value]} className="flex-item"
-                                value={AdvancedFilter1} handleChange={handleChange1}/>
+                        {Seasons}
                     </>
                 );
             case  "episodes111":
                 return (
                     <>
-                        <Select Array={[]} placeholder={state.hashEpisodes[value]} className="flex-item"
-                                value={AdvancedFilter2} handleChange={handleChange2}/>
+                        {Episodes}
                     </>
                 );
             default:

@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b88722a-7669-4c88-ab21-489144283650" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/Store/ActionTypes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/Components/AdvanceFilters.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Components/AdvanceFilters.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/api/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/api/data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Components/Select.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Components/Select.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Store/Actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Store/Actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Store/Store.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Store/Store.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Style/_inputs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Style/_inputs.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Style/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +128,11 @@
       <workItem from="1568226276461" duration="5273000" />
       <workItem from="1568384811163" duration="38000" />
       <workItem from="1568384860683" duration="4477000" />
-      <workItem from="1568483998089" duration="1737000" />
+      <workItem from="1568483998089" duration="2337000" />
+      <workItem from="1568653782434" duration="618000" />
+      <workItem from="1568656706525" duration="1064000" />
+      <workItem from="1568729209551" duration="176000" />
+      <workItem from="1568827199263" duration="3283000" />
     </task>
     <task id="LOCAL-00001" summary="advance filtering">
       <created>1568142098648</created>

@@ -1,5 +1,6 @@
 import React from 'react'
 import {IState, IAction} from "../interfaces";
+import {ActionTypes} from "./ActionTypes";
 
 const initialState: IState = {
     episodes: [],
@@ -14,24 +15,29 @@ export const Store = React.createContext<IState | any>(initialState);
 function reducers(state: any, action: IAction): IState {
 
     switch (action.type) {
-        case 'FETCH_DATA':
-            return {...state, episodes: action.payload ,filteredEpisodes:action.payload};
-        case 'ADD_FAV':
+        case ActionTypes.FETCH_DATA:
+            return {...state, episodes: action.payload, filteredEpisodes: action.payload};
+        case ActionTypes.ADD_FAV:
             return {...state, favourites: [...state.favourites, action.payload]};
-        case 'REMOVE_FAV':
+        case ActionTypes.REMOVE_FAV:
             return {...state, favourites: action.payload};
-        case "FETCH_FILTERS":
+        case ActionTypes.FETCH_FILTERS:
             return {...state, filters: action.payload};
-        case "MAP_ID":
+        case ActionTypes.MAP_ID:
             return {...state, hashEpisodes: action.payload};
-        case "GET_SEASONS":
+        case ActionTypes.GET_SEASONS:
             return {
                 ...state, Info: {
                     seasonsDrop: action.payload
                 }
             };
-        case "GET_EPISODES": {
-            return {...state};
+        case ActionTypes.GET_EPISODES: { /*here hava all of the episodes change it with the hash function*/
+            return {
+                ...state, Info: {
+                    ...state.Info,
+                    episodes: action.payload
+                }
+            };
         }
         default:
             return state;

@@ -1,0 +1,9 @@
+export const ActionTypes = {
+    FETCH_DATA: "FETCH_DATA",
+    GET_SEASONS: "GET_SEASONS",
+    GET_EPISODES: "GET_EPISODES",
+    REMOVE_FAV: "REMOVE_FAV",
+    ADD_FAV: "ADD_FAV",
+    FETCH_FILTERS: "FETCH_FILTERS",
+    MAP_ID: "MAP_ID"
+};
