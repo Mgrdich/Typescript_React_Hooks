@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import {Store} from "../Store/Store";
-import {fetchDataAction, getSeasons} from "../Store/Actions";
+import {fetchDataAction, getEpisodesALL, getSeasons} from "../Store/Actions";
 import AdvanceFilters from "./AdvanceFilters";
 import {useFetch} from "../hooks/FetchingHook";
 
@@ -15,7 +15,8 @@ export const Home = (): JSX.Element => {
     useEffect(() => {
         if (state.episodes.length && !seasonsDrop.length) {
             console.log("here");
-            getSeasons(dispatch,state.episodes)
+            getSeasons(dispatch,state.episodes);
+            getEpisodesALL(dispatch,state.episodes);
         }
     });
 

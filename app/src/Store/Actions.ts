@@ -1,5 +1,5 @@
 import {IEpisode, IState} from "../interfaces";
-import {fetchAPI} from "../utility/functions";
+import {fetchAPI, ObjValueCounter} from "../utility/functions";
 import DataJson from "../api/data.json"
 import {SelectObjectCreator} from "../utility/functions";
 import {ActionTypes} from "./ActionTypes";
@@ -13,7 +13,7 @@ export async function fetchDataAction(dispatch: any) {
     });
 }
 
-export function getSeasons(dispatch: any, episodes: any) {
+export function getSeasons(dispatch: any, episodes: any) { // mix this to gets together so it only have to do this once
 
     return dispatch({
         type: ActionTypes.GET_SEASONS,
@@ -23,9 +23,10 @@ export function getSeasons(dispatch: any, episodes: any) {
 }
 
 export function getEpisodesALL(dispatch: any, episodes: any) {
+
     return dispatch({
         type: ActionTypes.GET_EPISODES,
-        payload: ""
+        payload: EpisodesMaping(episodes)
     })
 }
 
@@ -67,4 +68,12 @@ export function MapIdArray(dispatch: any, obj: any) {
 
 function SeasonNumber(episodes: any): Number {
     return episodes[episodes.length - 1].season;
+}
+
+function EpisodesMaping(episodes: any) {
+    let episodesData: any = {season: {}};
+    for (let i = 1; i <= episodes[episodes.length - 1].season; i++) {
+        episodesData.season[i] = ObjValueCounter("season", i, episodes);
+    }
+    return episodesData;
 }

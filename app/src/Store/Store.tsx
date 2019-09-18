@@ -35,7 +35,7 @@ function reducers(state: any, action: IAction): IState {
             return {
                 ...state, Info: {
                     ...state.Info,
-                    episodes: action.payload
+                    episodesDrop: {...action.payload}
                 }
             };
         }
