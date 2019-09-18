@@ -28,6 +28,7 @@ function reducers(state: any, action: IAction): IState {
         case ActionTypes.GET_SEASONS:
             return {
                 ...state, Info: {
+                    ...state.Info,
                     seasonsDrop: action.payload
                 }
             };
