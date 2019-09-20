@@ -6,7 +6,7 @@ const initialState: IState = {
     episodes: [],
     favourites: [],
     filters: [],
-    Info: {seasonsDrop: []}
+    Info: {seasonsDrop: [], episodesDrop: {season: {}}}
 };
 
 

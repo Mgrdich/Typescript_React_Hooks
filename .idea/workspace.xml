@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="1b88722a-7669-4c88-ab21-489144283650" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Components/AdvanceFilters.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Components/AdvanceFilters.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/Store/Store.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Store/Store.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/api/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/api/data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/interfaces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/interfaces.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/utility/functions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/utility/functions.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -126,7 +130,8 @@
       <workItem from="1568653782434" duration="618000" />
       <workItem from="1568656706525" duration="1064000" />
       <workItem from="1568729209551" duration="176000" />
-      <workItem from="1568827199263" duration="6193000" />
+      <workItem from="1568827199263" duration="6223000" />
+      <workItem from="1569005678643" duration="2013000" />
     </task>
     <task id="LOCAL-00001" summary="advance filtering">
       <created>1568142098648</created>

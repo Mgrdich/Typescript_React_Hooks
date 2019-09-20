@@ -3,7 +3,7 @@ import {fetchDataFilers, MapIdArray} from "../Store/Actions";
 import {Store} from "../Store/Store";
 import Select from "./Select";
 import {useSelect} from "../hooks/SelectHook";
-import {mapIdObjectArray} from "../utility/functions";
+import {ArrayUntilNumber, createArrUntil, mapIdObjectArray} from "../utility/functions";
 import {useFetch} from "../hooks/FetchingHook";
 
 const AdvanceFilters = (): JSX.Element => {
@@ -20,8 +20,10 @@ const AdvanceFilters = (): JSX.Element => {
     }, [state.filters.length, dispatch, state.filters]);
 
     const DynamicFilters = function (value: any): JSX.Element {
-        const {seasonsDrop} = state.Info;
-        const Episodes: JSX.Element = <Select Array={[]} placeholder="Episodes" className="flex-item"
+        const {seasonsDrop, episodesDrop} = state.Info;
+        const Array = ArrayUntilNumber(episodesDrop.season[AdvancedFilter2]);
+        const Episodes: JSX.Element = <Select Array={[]} placeholder="Episodes"
+                                              className="flex-item"
                                               value={AdvancedFilter2} handleChange={handleChange2}/>;
         const Seasons: JSX.Element = <Select Array={seasonsDrop} placeholder="Seasons" className="flex-item"
                                              value={AdvancedFilter1} handleChange={handleChange1}/>;
@@ -41,12 +43,6 @@ const AdvanceFilters = (): JSX.Element => {
                         {Seasons}
                     </>
                 );
-            case  "episodes111":
-                return (
-                    <>
-                        {Episodes}
-                    </>
-                );
             default:
                 return (
                     <>
@@ -57,7 +53,7 @@ const AdvanceFilters = (): JSX.Element => {
         }
     };
 
-    if (state.filters.length) {
+    if (state.filters.length && state.Info) {
         return (
             <div className="Flexbox spaceBtwn">
 

@@ -20,7 +20,10 @@ export interface IState {
     favourites: Array<any>,
     filters: Array<any>,
     Info: {
-        seasonsDrop: Array<any>
+        seasonsDrop: Array<any>,
+        episodesDrop: {
+            season: any
+        }
     }
 }
 
