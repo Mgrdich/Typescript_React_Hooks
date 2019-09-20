@@ -5,6 +5,7 @@ import Select from "./Select";
 import {useSelect} from "../hooks/SelectHook";
 import {ArrayUntilNumber, createArrUntil, mapIdObjectArray} from "../utility/functions";
 import {useFetch} from "../hooks/FetchingHook";
+import {ArrayObjectCheckbox} from "../interfaces";
 
 const AdvanceFilters = (): JSX.Element => {
     const [valueSelect, handleChange] = useSelect();
@@ -21,35 +22,46 @@ const AdvanceFilters = (): JSX.Element => {
 
     const DynamicFilters = function (value: any): JSX.Element {
         const {seasonsDrop, episodesDrop} = state.Info;
-        const Array = ArrayUntilNumber(episodesDrop.season[AdvancedFilter2]);
-        const Episodes: JSX.Element = <Select Array={[]} placeholder="Episodes"
-                                              className="flex-item"
-                                              value={AdvancedFilter2} handleChange={handleChange2}/>;
-        const Seasons: JSX.Element = <Select Array={seasonsDrop} placeholder="Seasons" className="flex-item"
-                                             value={AdvancedFilter1} handleChange={handleChange1}/>;
+        if (seasonsDrop.length && Object.keys(episodesDrop.season).length) {
+            let SelectDataEpisodes: ArrayObjectCheckbox[] | any;
+            if (AdvancedFilter1) {
+                const Array: Array<number> = ArrayUntilNumber(episodesDrop.season[AdvancedFilter1]);
+                SelectDataEpisodes = createArrUntil(AdvancedFilter1, Array);
+            } else {
+                SelectDataEpisodes = [];
+            }
+            const Episodes: JSX.Element = <Select Array={SelectDataEpisodes} placeholder="Episodes"
+                                                  className="flex-item"
+                                                  value={AdvancedFilter2} handleChange={handleChange2}/>;
+            const Seasons: JSX.Element = <Select Array={seasonsDrop} placeholder="Seasons" className="flex-item"
+                                                 value={AdvancedFilter1} handleChange={handleChange1}/>;
 
-        switch (value) {
-            case "both111":
-                return (
-                    <>
-                        {Seasons}
-                        {Episodes}
-                    </>
+            switch (value) {
+                case "both111":
+                    return (
+                        <>
+                            {Seasons}
+                            {Episodes}
+                        </>
 
-                );
-            case "seasons111":
-                return (
-                    <>
-                        {Seasons}
-                    </>
-                );
-            default:
-                return (
-                    <>
-                    </>
-                );
+                    );
+                case "seasons111":
+                    return (
+                        <>
+                            {Seasons}
+                        </>
+                    );
+                default:
+                    return (
+                        <>
+                        </>
+                    );
 
 
+            }
+        } else {
+            return (<>
+            </>)
         }
     };
 
