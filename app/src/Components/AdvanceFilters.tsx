@@ -23,18 +23,21 @@ const AdvanceFilters = (): JSX.Element => {
     const DynamicFilters = function (value: any): JSX.Element {
         const {seasonsDrop, episodesDrop} = state.Info;
         if (seasonsDrop.length && Object.keys(episodesDrop.season).length) {
-            let SelectDataEpisodes: ArrayObjectCheckbox[] | any;
-            if (AdvancedFilter1) {
-                const Array: Array<number> = ArrayUntilNumber(episodesDrop.season[AdvancedFilter1]);
-                SelectDataEpisodes = createArrUntil(AdvancedFilter1, Array);
-            } else {
-                SelectDataEpisodes = [];
-            }
-            const Episodes: JSX.Element = <Select Array={SelectDataEpisodes} placeholder="Episodes"
-                                                  className="flex-item"
-                                                  value={AdvancedFilter2} handleChange={handleChange2}/>;
+
+            let Episodes: JSX.Element = <></>;
             const Seasons: JSX.Element = <Select Array={seasonsDrop} placeholder="Seasons" className="flex-item"
                                                  value={AdvancedFilter1} handleChange={handleChange1}/>;
+
+            //only when a value is selected by the
+            if (AdvancedFilter1) {
+                const Array: Array<number> = ArrayUntilNumber(episodesDrop.season[AdvancedFilter1]);
+                let SelectDataEpisodes: ArrayObjectCheckbox[] = createArrUntil(AdvancedFilter1, Array);
+                if (Array)
+                    Episodes = <Select Array={SelectDataEpisodes} placeholder="Episodes"
+                                       className="flex-item"
+                                       value={AdvancedFilter2} handleChange={handleChange2}/>;
+
+            }
 
             switch (value) {
                 case "both111":

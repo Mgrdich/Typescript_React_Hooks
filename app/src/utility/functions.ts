@@ -58,13 +58,12 @@ export function ObjValueCounter(key: string, value: any, arr: any[]): Number {
 
 export function createArrUntil(season: number, arr: number[]): ArrayObjectCheckbox[] | any {
     if (arr) {
-        const bb = arr.reduce((acc: any, current: any): any => {
+        return arr.reduce((acc: any, current: any): any => {
             let obj: any = {};
-            obj.name = current;
+            obj.name = `${current}`;
             obj.id =  season + "episode"+current;
             return [...acc, obj];
         }, []);
-        console.log(bb);
     }
 }
 
