@@ -32,11 +32,11 @@ const AdvanceFilters = (): JSX.Element => {
             if (AdvancedFilter1) {
                 const Array: Array<number> = ArrayUntilNumber(episodesDrop.season[AdvancedFilter1]);
                 let SelectDataEpisodes: ArrayObjectCheckbox[] = createArrUntil(AdvancedFilter1, Array);
-                if (Array)
+                if (Array) {
                     Episodes = <Select Array={SelectDataEpisodes} placeholder="Episodes"
                                        className="flex-item"
                                        value={AdvancedFilter2} handleChange={handleChange2}/>;
-
+                }
             }
 
             switch (value) {
@@ -79,8 +79,8 @@ const AdvanceFilters = (): JSX.Element => {
                     {DynamicFilters(valueSelect)}
                 </div>
                 <div className="flex-item">
-                    <button className="btn btn-danger m-r-15">Submit</button>
-                    <button className="btn btns">Reset</button>
+                    <button className="btn btn-danger-white m-r-15" onClick={()=>{}}>Submit</button>
+                    <button className="btn btns" onClick={(e)=>handleChange(e,true)}>Reset</button>
                 </div>
             </div>
         );

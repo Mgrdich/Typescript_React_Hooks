@@ -74,3 +74,11 @@ export function ArrayUntilNumber(num: number) {
     }
     return arr;
 }
+
+export function FilterArrayObject(Arr: Array<any>, propertyName: string, propertyValue: string) {
+    return Arr.filter((item:any) => {
+        if(item[propertyName] === propertyValue) {
+            return true
+        }
+    });
+}

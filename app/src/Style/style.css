@@ -94,6 +94,16 @@ select {
   font-weight: 600 !important;
   background-color: #fff !important; }
 
+.btn-danger-white {
+  background-color: white;
+  color: #441222;
+  border: 2px solid #441222;
+  font-weight: 600; }
+
+.btn-danger-white:hover {
+  color: #1c070e;
+  background-color: #e6e6e6; }
+
 /*custom Flexbox*/
 .Flexbox {
   display: flex;

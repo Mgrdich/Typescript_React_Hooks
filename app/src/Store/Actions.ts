@@ -1,5 +1,5 @@
 import {IEpisode, IState} from "../interfaces";
-import {fetchAPI, ObjValueCounter} from "../utility/functions";
+import {fetchAPI, FilterArrayObject, ObjValueCounter} from "../utility/functions";
 import DataJson from "../api/data.json"
 import {SelectObjectCreator} from "../utility/functions";
 import {ActionTypes} from "./ActionTypes";
@@ -66,6 +66,18 @@ export function MapIdArray(dispatch: any, obj: any) {
     })
 }
 
+export function filterArray(dispatch: any, episodes: any, prop: string, propVal: string, ...Args: any) {
+    let arr: Array<any> = [];
+    for (let i = 0; i < Args.length; i++) {
+        arr = FilterArrayObject(Args[0], prop, propVal);
+    }
+    return dispatch({
+        type: ActionTypes.FILTER_EPISODES,
+        payload: arr
+    })
+}
+
+/*helper before dipatching*/
 function SeasonNumber(episodes: any): Number {
     return episodes[episodes.length - 1].season;
 }
@@ -73,7 +85,7 @@ function SeasonNumber(episodes: any): Number {
 function EpisodesMaping(episodes: any) {
     let episodesData: any = {season: {}};
     for (let i = 1; i <= episodes[episodes.length - 1].season; i++) {
-        episodesData.season["season"+i] = ObjValueCounter("season", i, episodes); //to get the same as the id of the the other
+        episodesData.season["season" + i] = ObjValueCounter("season", i, episodes); //to get the same as the id of the the other
     }
     return episodesData;
 }

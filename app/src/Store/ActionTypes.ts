@@ -5,5 +5,6 @@ export const ActionTypes = {
     REMOVE_FAV: "REMOVE_FAV",
     ADD_FAV: "ADD_FAV",
     FETCH_FILTERS: "FETCH_FILTERS",
-    MAP_ID: "MAP_ID"
+    MAP_ID: "MAP_ID",
+    FILTER_EPISODES:"FILTER_EPISODES"
 };

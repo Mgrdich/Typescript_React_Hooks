@@ -8,3 +8,14 @@ select {
   font-weight: 600 !important;
   background-color: #fff !important;
 }
+
+.btn-danger-white {
+  background-color: white;
+  color:$btn-color;
+  border: 2px solid $btn-color;
+  font-weight: 600;
+  &:hover {
+    color:darken($btn-color,10);
+    background-color:darken(white,10);
+  }
+}
