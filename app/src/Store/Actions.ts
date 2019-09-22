@@ -66,10 +66,11 @@ export function MapIdArray(dispatch: any, obj: any) {
     })
 }
 
-export function filterArray(dispatch: any, episodes: any, prop: string, propVal: string, ...Args: any) {
-    let arr: Array<any> = [];
-    for (let i = 0; i < Args.length; i++) {
-        arr = FilterArrayObject(Args[0], prop, propVal);
+export function filterArray(dispatch: any, Fepisodes: any, prop: string[], propVal: number[]) {
+
+   let arr: Array<any> = [];
+   for (let i = 0; i < prop.length; i++) {
+        arr = FilterArrayObject(Fepisodes, prop[i], propVal[i]);
     }
     return dispatch({
         type: ActionTypes.FILTER_EPISODES,

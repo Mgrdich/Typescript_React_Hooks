@@ -13,8 +13,7 @@ export const Home = (): JSX.Element => {
     console.log(state);
     const {seasonsDrop} = state.Info;
     useEffect(() => {
-        if (state.episodes.length && !seasonsDrop.length) {
-            console.log("here");
+        if (state.filteredEpisodes.length && !seasonsDrop.length) {
             getSeasons(dispatch,state.episodes);
             getEpisodesALL(dispatch,state.episodes);
         }

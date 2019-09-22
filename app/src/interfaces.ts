@@ -24,7 +24,8 @@ export interface IState {
         episodesDrop: {
             season: any
         }
-    }
+    },
+    filteredEpisodes:Array<any>
 }
 
 export interface IAction {

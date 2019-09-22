@@ -6,7 +6,8 @@ const initialState: IState = {
     episodes: [],
     favourites: [],
     filters: [],
-    Info: {seasonsDrop: [], episodesDrop: {season: {}}}
+    Info: {seasonsDrop: [], episodesDrop: {season: {}}},
+    filteredEpisodes:[]
 };
 
 
@@ -39,6 +40,12 @@ function reducers(state: any, action: IAction): IState {
                     episodesDrop: {...action.payload}
                 }
             };
+        }
+        case ActionTypes.FILTER_EPISODES: {
+            return {
+                ...state,
+                filteredEpisodes: action.payload //because the filter should always override itself
+            }
         }
         default:
             return state;

@@ -1,5 +1,5 @@
 import React from 'react';
-import {fetchDataFilers, MapIdArray} from "../Store/Actions";
+import {fetchDataFilers, filterArray, MapIdArray} from "../Store/Actions";
 import {Store} from "../Store/Store";
 import Select from "./Select";
 import {useSelect} from "../hooks/SelectHook";
@@ -68,6 +68,17 @@ const AdvanceFilters = (): JSX.Element => {
         }
     };
 
+    const filteringArray = function () {
+        let a = AdvancedFilter1.length - 1;
+        let a1 = parseInt(AdvancedFilter1[a]);
+        if (AdvancedFilter1 && AdvancedFilter2) {
+            let b = AdvancedFilter2.length - 1;
+            let a2 = parseInt(AdvancedFilter2[b]);
+            filterArray(dispatch, state.filteredEpisodes, ["season", "number"], [a1, a2]);
+        } else if (AdvancedFilter1)
+            filterArray(dispatch, state.filteredEpisodes, ["season"], [a1]);
+    };
+
     if (state.filters.length && state.Info) {
         return (
             <div className="Flexbox spaceBtwn">
@@ -79,8 +90,8 @@ const AdvanceFilters = (): JSX.Element => {
                     {DynamicFilters(valueSelect)}
                 </div>
                 <div className="flex-item">
-                    <button className="btn btn-danger-white m-r-15" onClick={()=>{}}>Submit</button>
-                    <button className="btn btns" onClick={(e)=>handleChange(e,true)}>Reset</button>
+                    <button className="btn btn-danger-white m-r-15" onClick={filteringArray}>Submit</button>
+                    <button className="btn btns" onClick={(e) => handleChange(e, true)}>Reset</button>
                 </div>
             </div>
         );

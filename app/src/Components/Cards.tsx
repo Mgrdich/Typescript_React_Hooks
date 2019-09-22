@@ -9,7 +9,7 @@ const Cards = ():JSX.Element => {
     return (
         <div className="row">
             {
-                state.episodes.map((episode: IEpisode, index: number) => {
+                state.filteredEpisodes.map((episode: IEpisode, index: number) => {
                     return (
                         <Card {...episode} key={index}/>
                     );

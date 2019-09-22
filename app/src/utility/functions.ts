@@ -61,7 +61,7 @@ export function createArrUntil(season: number, arr: number[]): ArrayObjectCheckb
         return arr.reduce((acc: any, current: any): any => {
             let obj: any = {};
             obj.name = `${current}`;
-            obj.id =  season + "episode"+current;
+            obj.id = season + "episode" + current;
             return [...acc, obj];
         }, []);
     }
@@ -75,10 +75,11 @@ export function ArrayUntilNumber(num: number) {
     return arr;
 }
 
-export function FilterArrayObject(Arr: Array<any>, propertyName: string, propertyValue: string) {
-    return Arr.filter((item:any) => {
-        if(item[propertyName] === propertyValue) {
+export function FilterArrayObject(Arr: Array<any>, propertyName: string, propertyValue: number | string | boolean) {
+    const bb = Arr.filter((item: any) => {
+        if (item[propertyName] === propertyValue) {
             return true
         }
     });
+    return bb;
 }
