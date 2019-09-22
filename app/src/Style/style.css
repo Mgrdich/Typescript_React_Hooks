@@ -100,7 +100,7 @@ select {
   border: 2px solid #441222;
   font-weight: 600; }
 
-.btn-danger-white:hover {
+.btn-danger-white:hover:not(disabled) {
   color: #1c070e;
   background-color: #e6e6e6; }
 

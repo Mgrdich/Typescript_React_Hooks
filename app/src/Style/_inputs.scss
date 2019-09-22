@@ -14,7 +14,7 @@ select {
   color:$btn-color;
   border: 2px solid $btn-color;
   font-weight: 600;
-  &:hover {
+  &:hover:not(disabled) {
     color:darken($btn-color,10);
     background-color:darken(white,10);
   }

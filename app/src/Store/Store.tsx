@@ -47,6 +47,12 @@ function reducers(state: any, action: IAction): IState {
                 filteredEpisodes: action.payload //because the filter should always override itself
             }
         }
+        case  ActionTypes.RESET_FILTERS: {
+            return {
+                ...state,
+                filteredEpisodes: state.episodes
+            }
+        }
         default:
             return state;
     }

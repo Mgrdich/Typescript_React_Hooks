@@ -78,6 +78,12 @@ export function filterArray(dispatch: any, Fepisodes: any, prop: string[], propV
     })
 }
 
+export function filterArrayResetAction(dispatch: any){
+    return dispatch({
+        type:ActionTypes.RESET_FILTERS
+    })
+}
+
 /*helper before dipatching*/
 function SeasonNumber(episodes: any): Number {
     return episodes[episodes.length - 1].season;

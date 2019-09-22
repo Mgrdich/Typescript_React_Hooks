@@ -4,12 +4,11 @@
     <list default="true" id="1b88722a-7669-4c88-ab21-489144283650" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/Components/AdvanceFilters.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Components/AdvanceFilters.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Components/Cards.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Components/Cards.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Components/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Components/Home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Store/ActionTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Store/ActionTypes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/Store/Actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Store/Actions.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/Store/Store.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Store/Store.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/interfaces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/interfaces.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/utility/functions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/utility/functions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Style/_inputs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Style/_inputs.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Style/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -136,7 +135,7 @@
       <workItem from="1569005678643" duration="2013000" />
       <workItem from="1569016595090" duration="2359000" />
       <workItem from="1569091862253" duration="3184000" />
-      <workItem from="1569140305338" duration="3532000" />
+      <workItem from="1569140305338" duration="4653000" />
     </task>
     <task id="LOCAL-00001" summary="advance filtering">
       <created>1568142098648</created>
