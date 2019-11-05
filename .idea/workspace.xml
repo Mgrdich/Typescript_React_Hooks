@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1b88722a-7669-4c88-ab21-489144283650" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Components/AdvanceFilters.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Components/AdvanceFilters.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Store/ActionTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Store/ActionTypes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Store/Actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Store/Actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Store/Store.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Store/Store.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Style/_inputs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Style/_inputs.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Style/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Components/Card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Components/Card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +39,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
-    <property name="ts.external.directory.path" value="$PROJECT_DIR$/app/node_modules/typescript/lib" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -135,7 +131,12 @@
       <workItem from="1569005678643" duration="2013000" />
       <workItem from="1569016595090" duration="2359000" />
       <workItem from="1569091862253" duration="3184000" />
-      <workItem from="1569140305338" duration="4653000" />
+      <workItem from="1569140305338" duration="4694000" />
+      <workItem from="1569170244006" duration="240000" />
+      <workItem from="1569170535155" duration="4000" />
+      <workItem from="1569171571317" duration="12000" />
+      <workItem from="1570982324410" duration="141000" />
+      <workItem from="1570983352921" duration="614000" />
     </task>
     <task id="LOCAL-00001" summary="advance filtering">
       <created>1568142098648</created>

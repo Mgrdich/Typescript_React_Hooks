@@ -9,9 +9,10 @@ const Card = (props: IEpisode):JSX.Element => {
     const {state, dispatch} = React.useContext(Store);
 
     const {id, name, season, number, image} = props;
+
     return (
         <div className="card special_card col-lg-4 col-md-6 col-sm-12" key={id}>
-            <img src={image.medium} alt={`Rick and Morty ${name}`}/>
+            <img src={(image)?image.medium:""} alt={`Rick and Morty ${name}`}/>
             <div className="card_header">{name}</div>
             <div className="card_body">
                 Season:{season} Number {number}
