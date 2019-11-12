@@ -10,7 +10,6 @@ const CardsList = React.lazy(() => import('./Cards'));
 export const Home = (): JSX.Element => {
     const {state, dispatch} = React.useContext(Store);
 
-    console.log(state);
     const {seasonsDrop} = state.Info;
     useEffect(() => {
         if (state.filteredEpisodes.length && !seasonsDrop.length) {

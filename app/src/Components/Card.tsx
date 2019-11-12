@@ -5,7 +5,7 @@ import {toggleAction} from "../Store/Actions";
 
 const Card = (props: IEpisode):JSX.Element => {
 
-
+    console.log("Rendering");
     const {state, dispatch} = React.useContext(Store);
 
     const {id, name, season, number, image} = props;
@@ -29,4 +29,4 @@ const Card = (props: IEpisode):JSX.Element => {
     );
 };
 
-export default Card;
+export default React.memo(Card);

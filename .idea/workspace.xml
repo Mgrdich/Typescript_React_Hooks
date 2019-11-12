@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1b88722a-7669-4c88-ab21-489144283650" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Components/AdvanceFilters.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Components/AdvanceFilters.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/Components/Card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Components/Card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Components/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Components/Home.tsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +40,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
-    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/app/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -137,6 +138,7 @@
       <workItem from="1569171571317" duration="12000" />
       <workItem from="1570982324410" duration="141000" />
       <workItem from="1570983352921" duration="614000" />
+      <workItem from="1573585345915" duration="438000" />
     </task>
     <task id="LOCAL-00001" summary="advance filtering">
       <created>1568142098648</created>

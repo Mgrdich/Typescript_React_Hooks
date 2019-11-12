@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import {fetchDataFilers, filterArray, filterArrayResetAction, MapIdArray} from "../Store/Actions";
 import {Store} from "../Store/Store";
 import Select from "./Select";
@@ -68,23 +68,22 @@ const AdvanceFilters = (): JSX.Element => {
         }
     };
 
-    const filteringArraySubmit = function () {
+    const filteringArraySubmit = useCallback(function (AdvancedFilter1:any, AdvancedFilter2:any, array:any) {
         let a = AdvancedFilter1.length - 1;
         let a1 = parseInt(AdvancedFilter1[a]);
         if (AdvancedFilter1 && AdvancedFilter2) {
             let b = AdvancedFilter2.length - 1;
             let a2 = parseInt(AdvancedFilter2[b]);
-            filterArray(dispatch, state.filteredEpisodes, ["season", "number"], [a1, a2]);
+            filterArray(dispatch, array, ["season", "number"], [a1, a2]);
         } else if (AdvancedFilter1)
-            filterArray(dispatch, state.filteredEpisodes, ["season"], [a1]);
-    };
+            filterArray(dispatch, array, ["season"], [a1]);
+    },[AdvancedFilter1,AdvancedFilter2,state.filteredEpisodes]);
 
     const filteringArrayReset = function (e: any) {
         handleChange(e, true);
-        handleChange1(e,true); //to reset the values
-        handleChange2(e,true);
+        handleChange1(e, true); //to reset the values
+        handleChange2(e, true);
         filterArrayResetAction(dispatch);
-
     };
 
     if (state.filters.length && state.Info) {
@@ -98,7 +97,10 @@ const AdvanceFilters = (): JSX.Element => {
                     {DynamicFilters(valueSelect)}
                 </div>
                 <div className="flex-item">
-                    <button className="btn btn-danger-white m-r-15" onClick={filteringArraySubmit} disabled={!AdvancedFilter1}>Submit</button>
+                    <button className="btn btn-danger-white m-r-15"
+                            onClick={() => filteringArraySubmit(AdvancedFilter1, AdvancedFilter2, state.filteredEpisodes)}
+                            disabled={!AdvancedFilter1}>Submit
+                    </button>
                     <button className="btn btns" onClick={(e) => filteringArrayReset(e)}>Reset</button>
                 </div>
             </div>
