@@ -1,5 +1,6 @@
 import React from 'react';
 import {randomItemArray, toggleHeads} from "../utility/functions";
+import history from "../utility/history";
 
 interface IProps {
     title: string,
@@ -22,7 +23,7 @@ const Unfortunately = (props: IProps): JSX.Element => {
                 />
             </div>
             <div className="header">{props.title}</div>
-            <div className="btns">Home</div>
+            <div className="btns" onClick={()=>history.push("/")}>Home</div>
             {props.children}
         </div>
     );

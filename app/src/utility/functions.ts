@@ -76,10 +76,9 @@ export function ArrayUntilNumber(num: number) {
 }
 
 export function FilterArrayObject(Arr: Array<any>, propertyName: string, propertyValue: number | string | boolean) {
-    const bb = Arr.filter((item: any) => {
+    return  Arr.filter((item: any) => {
         if (item[propertyName] === propertyValue) {
             return true
         }
     });
-    return bb;
 }

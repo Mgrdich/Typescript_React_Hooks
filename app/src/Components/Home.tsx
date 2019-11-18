@@ -7,7 +7,7 @@ import {useFetch} from "../hooks/FetchingHook";
 
 const CardsList = React.lazy(() => import('./Cards'));
 
-export const Home = (): JSX.Element => {
+export const Home:React.FC = () => {
     const {state, dispatch} = React.useContext(Store);
 
     const {seasonsDrop} = state.Info;

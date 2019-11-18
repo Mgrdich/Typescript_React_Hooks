@@ -3,9 +3,8 @@ import {IEpisode} from "../interfaces";
 import {Store} from "../Store/Store";
 import {toggleAction} from "../Store/Actions";
 
-const Card = (props: IEpisode):JSX.Element => {
+const Card:React.FC<IEpisode> = (props) => {
 
-    console.log("Rendering");
     const {state, dispatch} = React.useContext(Store);
 
     const {id, name, season, number, image} = props;

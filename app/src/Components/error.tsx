@@ -3,7 +3,7 @@ import Unfortunately from "./unfortunately";
 import {arrayPic} from "../utility/Globals";
 
 
-const Error = ():JSX.Element => {
+const Error:React.FC = () => {
     return (
         <Unfortunately
             title="404 Page is not Found"

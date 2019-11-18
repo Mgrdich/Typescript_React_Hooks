@@ -5,7 +5,7 @@ import Card from "./Card";
 import Unfortunately from "./unfortunately";
 import {arrayPic} from "../utility/Globals";
 
-export const Fav = (): JSX.Element => {
+export const Fav:React.FC = () => {
 
 
     const {state} = React.useContext(Store);

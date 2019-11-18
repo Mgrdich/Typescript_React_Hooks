@@ -7,6 +7,60 @@ import {ArrayUntilNumber, createArrUntil, mapIdObjectArray} from "../utility/fun
 import {useFetch} from "../hooks/FetchingHook";
 import {ArrayObjectCheckbox} from "../interfaces";
 
+interface objectType   {
+    arr:Array<any>;
+    handle:Function;
+}
+const DynamicFilters = function (value: any , info:any,obj1:any,obj2:any): JSX.Element {
+    const {seasonsDrop, episodesDrop} = info;
+    if (seasonsDrop.length && Object.keys(episodesDrop.season).length) {
+
+        console.log(obj1);
+        let Episodes: JSX.Element = <></>;
+        const Seasons: JSX.Element = <Select Array={seasonsDrop} placeholder="Seasons" className="flex-item"
+                                             value={obj1.arr} handleChange={obj1.handle}/>;
+
+        //only when a value is selected by the
+        if (obj1.arr) {
+            const Arrays: Array<number> = ArrayUntilNumber(episodesDrop.season[obj1.arr]);
+            let SelectDataEpisodes: ArrayObjectCheckbox[] = createArrUntil(obj1.arr, Arrays);
+            if (Arrays.length) {
+                Episodes = <Select Array={SelectDataEpisodes} placeholder="Episodes"
+                                   className="flex-item"
+                                   value={obj2.arr} handleChange={obj2.handle}/>;
+            }
+        }
+
+        switch (value) {
+            case "both111":
+                return (
+                    <>
+                        {Seasons}
+                        {Episodes}
+                    </>
+
+                );
+            case "seasons111":
+                return (
+                    <>
+                        {Seasons}
+                    </>
+                );
+            default:
+                return (
+                    <>
+                    </>
+                );
+
+
+        }
+    } else {
+        return (<>
+        </>)
+    }
+};
+
+
 const AdvanceFilters = (): JSX.Element => {
     const [valueSelect, handleChange] = useSelect();
     const [AdvancedFilter1, handleChange1] = useSelect();
@@ -20,53 +74,6 @@ const AdvanceFilters = (): JSX.Element => {
         MapIdArray(dispatch, mapIdObjectArray(state.filters));
     }, [state.filters.length, dispatch, state.filters]);
 
-    const DynamicFilters = function (value: any): JSX.Element {
-        const {seasonsDrop, episodesDrop} = state.Info;
-        if (seasonsDrop.length && Object.keys(episodesDrop.season).length) {
-
-            let Episodes: JSX.Element = <></>;
-            const Seasons: JSX.Element = <Select Array={seasonsDrop} placeholder="Seasons" className="flex-item"
-                                                 value={AdvancedFilter1} handleChange={handleChange1}/>;
-
-            //only when a value is selected by the
-            if (AdvancedFilter1) {
-                const Array: Array<number> = ArrayUntilNumber(episodesDrop.season[AdvancedFilter1]);
-                let SelectDataEpisodes: ArrayObjectCheckbox[] = createArrUntil(AdvancedFilter1, Array);
-                if (Array) {
-                    Episodes = <Select Array={SelectDataEpisodes} placeholder="Episodes"
-                                       className="flex-item"
-                                       value={AdvancedFilter2} handleChange={handleChange2}/>;
-                }
-            }
-
-            switch (value) {
-                case "both111":
-                    return (
-                        <>
-                            {Seasons}
-                            {Episodes}
-                        </>
-
-                    );
-                case "seasons111":
-                    return (
-                        <>
-                            {Seasons}
-                        </>
-                    );
-                default:
-                    return (
-                        <>
-                        </>
-                    );
-
-
-            }
-        } else {
-            return (<>
-            </>)
-        }
-    };
 
     const filteringArraySubmit = useCallback(function (AdvancedFilter1:any, AdvancedFilter2:any, array:any) {
         let a = AdvancedFilter1.length - 1;
@@ -77,7 +84,7 @@ const AdvanceFilters = (): JSX.Element => {
             filterArray(dispatch, array, ["season", "number"], [a1, a2]);
         } else if (AdvancedFilter1)
             filterArray(dispatch, array, ["season"], [a1]);
-    },[AdvancedFilter1,AdvancedFilter2,state.filteredEpisodes]);
+    },[AdvancedFilter1,AdvancedFilter2,state.filteredEpisodes,dispatch]);
 
     const filteringArrayReset = function (e: any) {
         handleChange(e, true);
@@ -94,7 +101,10 @@ const AdvanceFilters = (): JSX.Element => {
                     <Select Array={state.filters} placeholder="Filters" value={valueSelect}
                             handleChange={handleChange}
                             className="flex-item"/>
-                    {DynamicFilters(valueSelect)}
+                    {DynamicFilters(valueSelect, state.Info, {arr:AdvancedFilter1, handle:handleChange1}, {
+                        arr:AdvancedFilter2,
+                        handle:handleChange2
+                    })}
                 </div>
                 <div className="flex-item">
                     <button className="btn btn-danger-white m-r-15"

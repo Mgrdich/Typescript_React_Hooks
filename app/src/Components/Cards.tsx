@@ -3,7 +3,7 @@ import {IEpisode} from "../interfaces";
 import {Store} from "../Store/Store";
 import Card from "./Card";
 
-const Cards = ():JSX.Element => {
+const Cards:React.FC = () => {
     const {state} = React.useContext(Store);
 
     return (
