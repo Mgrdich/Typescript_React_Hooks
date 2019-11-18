@@ -67,7 +67,7 @@ export function createArrUntil(season: number, arr: number[]): ArrayObjectCheckb
     }
 }
 
-export function ArrayUntilNumber(num: number) {
+export function ArrayUntilNumber(num: number):Array<any> {
     let arr: Array<number> = [];
     for (let i = 1; i <= num; i++) {
         arr.push(i);

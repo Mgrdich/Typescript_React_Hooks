@@ -1,7 +1,7 @@
 import React from 'react';
 import {IPropsSelect} from "../interfaces";
 
-const Select = (props: IPropsSelect) => {
+const Select:React.FC<IPropsSelect> = (props) => {
     const {Array, multiple, className, value: valueSelect, handleChange, placeholder} = props;
 
 

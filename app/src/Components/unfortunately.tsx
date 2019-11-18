@@ -10,7 +10,7 @@ interface IProps {
     render?:any
 }
 
-const Unfortunately = (props: IProps): JSX.Element => {
+const Unfortunately:React.FC<IProps> = (props): JSX.Element => {
     const {customStuff, mainClass} = props;
     const [img,ChangeImage] = React.useState(randomItemArray(customStuff.arrayPic));
     return (

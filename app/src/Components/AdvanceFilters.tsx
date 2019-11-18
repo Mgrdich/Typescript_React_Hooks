@@ -7,15 +7,20 @@ import {ArrayUntilNumber, createArrUntil, mapIdObjectArray} from "../utility/fun
 import {useFetch} from "../hooks/FetchingHook";
 import {ArrayObjectCheckbox} from "../interfaces";
 
+
+type arrayType =  {
+    id:string;
+    name:string;
+}
 interface objectType   {
-    arr:Array<any>;
+    arr:any;
     handle:Function;
 }
-const DynamicFilters = function (value: any , info:any,obj1:any,obj2:any): JSX.Element {
+const DynamicFilters = function (value: any , info:any,obj1:objectType,obj2:objectType): JSX.Element {
     const {seasonsDrop, episodesDrop} = info;
     if (seasonsDrop.length && Object.keys(episodesDrop.season).length) {
 
-        console.log(obj1);
+
         let Episodes: JSX.Element = <></>;
         const Seasons: JSX.Element = <Select Array={seasonsDrop} placeholder="Seasons" className="flex-item"
                                              value={obj1.arr} handleChange={obj1.handle}/>;
@@ -86,12 +91,12 @@ const AdvanceFilters = (): JSX.Element => {
             filterArray(dispatch, array, ["season"], [a1]);
     },[AdvancedFilter1,AdvancedFilter2,state.filteredEpisodes,dispatch]);
 
-    const filteringArrayReset = function (e: any) {
+    const filteringArrayReset = useCallback(function (e: any) {
         handleChange(e, true);
         handleChange1(e, true); //to reset the values
         handleChange2(e, true);
         filterArrayResetAction(dispatch);
-    };
+    }, [dispatch]);
 
     if (state.filters.length && state.Info) {
         return (
