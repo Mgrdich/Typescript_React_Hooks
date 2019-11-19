@@ -68,7 +68,6 @@ const AdvanceFilters = (): JSX.Element => {
     const [AdvancedFilter2, handleChange2] = useSelect();
 
 
-    console.log(valueSelect);
     const {state, dispatch} = React.useContext(Store);
 
 
@@ -79,17 +78,17 @@ const AdvanceFilters = (): JSX.Element => {
     }, [state.filters.length, dispatch, state.filters]);
 
 
-    const filteringArraySubmit = useCallback(function (AdvancedFilter1:any, AdvancedFilter2:any, array:any) {
+    const filteringArraySubmit = useCallback(function (AdvancedFilter1:any, AdvancedFilter2:any, array:any,value:string) {
         let a = AdvancedFilter1.length - 1;
         let a1 = parseInt(AdvancedFilter1[a]);
-        if (AdvancedFilter1 && AdvancedFilter2) {
+        if (value==='both111') {
             let b = AdvancedFilter2.length - 1;
             let a2 = parseInt(AdvancedFilter2[b]);
             filterArray(dispatch, array, ["number", "season"], [a2,a1]);
         } else if (AdvancedFilter1) {
             filterArray(dispatch, array, ["season"], [a1]);
         }
-    }, [AdvancedFilter1, AdvancedFilter2, state.episodes, dispatch]);
+    }, [AdvancedFilter1, AdvancedFilter2, state.episodes, dispatch,valueSelect]);
 
     const filteringArrayReset = useCallback(function (e: any) {
         handleChange(e, true);
@@ -113,7 +112,7 @@ const AdvanceFilters = (): JSX.Element => {
                 </div>
                 <div className="flex-item">
                     <button className="btn btn-danger-white m-r-15"
-                            onClick={() => filteringArraySubmit(AdvancedFilter1, AdvancedFilter2, state.episodes)}
+                            onClick={() => filteringArraySubmit(AdvancedFilter1, AdvancedFilter2, state.episodes,valueSelect)}
                             disabled={!AdvancedFilter1}>Submit
                     </button>
                     <button className="btn btns" onClick={(e) => filteringArrayReset(e)}>Reset</button>
