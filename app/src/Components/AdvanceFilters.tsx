@@ -8,10 +8,6 @@ import {useFetch} from "../hooks/FetchingHook";
 import {ArrayObjectCheckbox} from "../interfaces";
 
 
-type arrayType =  {
-    id:string;
-    name:string;
-}
 interface objectType   {
     arr:any;
     handle:Function;
@@ -71,7 +67,10 @@ const AdvanceFilters = (): JSX.Element => {
     const [AdvancedFilter1, handleChange1] = useSelect();
     const [AdvancedFilter2, handleChange2] = useSelect();
 
+
+    console.log(valueSelect);
     const {state, dispatch} = React.useContext(Store);
+
 
     useFetch(fetchDataFilers, dispatch);
 
@@ -86,10 +85,11 @@ const AdvanceFilters = (): JSX.Element => {
         if (AdvancedFilter1 && AdvancedFilter2) {
             let b = AdvancedFilter2.length - 1;
             let a2 = parseInt(AdvancedFilter2[b]);
-            filterArray(dispatch, array, ["season", "number"], [a1, a2]);
-        } else if (AdvancedFilter1)
+            filterArray(dispatch, array, ["number", "season"], [a2,a1]);
+        } else if (AdvancedFilter1) {
             filterArray(dispatch, array, ["season"], [a1]);
-    },[AdvancedFilter1,AdvancedFilter2,state.filteredEpisodes,dispatch]);
+        }
+    }, [AdvancedFilter1, AdvancedFilter2, state.episodes, dispatch]);
 
     const filteringArrayReset = useCallback(function (e: any) {
         handleChange(e, true);
@@ -113,7 +113,7 @@ const AdvanceFilters = (): JSX.Element => {
                 </div>
                 <div className="flex-item">
                     <button className="btn btn-danger-white m-r-15"
-                            onClick={() => filteringArraySubmit(AdvancedFilter1, AdvancedFilter2, state.filteredEpisodes)}
+                            onClick={() => filteringArraySubmit(AdvancedFilter1, AdvancedFilter2, state.episodes)}
                             disabled={!AdvancedFilter1}>Submit
                     </button>
                     <button className="btn btns" onClick={(e) => filteringArrayReset(e)}>Reset</button>

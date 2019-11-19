@@ -75,10 +75,13 @@ export function ArrayUntilNumber(num: number):Array<any> {
     return arr;
 }
 
-export function FilterArrayObject(Arr: Array<any>, propertyName: string, propertyValue: number | string | boolean) {
-    return  Arr.filter((item: any) => {
-        if (item[propertyName] === propertyValue) {
+export function FilterArrayObject(Arr: Array<any>, key: string, propertyValue: number | string | boolean) {
+
+   let sss =   Arr.filter((item: any) => {
+        if (item[key] === propertyValue) {
             return true
         }
     });
+    console.log(sss,key,propertyValue);
+    return sss;
 }

@@ -11,7 +11,7 @@ export const Home:React.FC = () => {
     const {state, dispatch} = React.useContext(Store);
 
     const {seasonsDrop} = state.Info;
-    console.log("Render");
+
     useEffect(() => {
         if (state.filteredEpisodes.length && !seasonsDrop.length) {
             getSeasons(dispatch,state.episodes);

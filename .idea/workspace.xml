@@ -4,9 +4,8 @@
     <list default="true" id="1b88722a-7669-4c88-ab21-489144283650" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/Components/AdvanceFilters.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Components/AdvanceFilters.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Components/Card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Components/Card.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/Components/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Components/Home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Components/Select.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Components/Select.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Store/Actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Store/Actions.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/utility/functions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/utility/functions.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -144,7 +143,8 @@
       <workItem from="1573756238720" duration="89000" />
       <workItem from="1574009492468" duration="2087000" />
       <workItem from="1574100364343" duration="623000" />
-      <workItem from="1574103301168" duration="997000" />
+      <workItem from="1574103301168" duration="1119000" />
+      <workItem from="1574187173814" duration="2863000" />
     </task>
     <task id="LOCAL-00001" summary="advance filtering">
       <created>1568142098648</created>

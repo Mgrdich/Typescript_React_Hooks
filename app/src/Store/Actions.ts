@@ -68,9 +68,9 @@ export function MapIdArray(dispatch: any, obj: any) {
 
 export function filterArray(dispatch: any, Fepisodes: any, prop: string[], propVal: number[]) {
 
-   let arr: Array<any> = [];
-   for (let i = 0; i < prop.length; i++) {
-        arr = FilterArrayObject(Fepisodes, prop[i], propVal[i]);
+   let arr: Array<any> = Fepisodes;
+   for (let i = 0; i < prop.length; i++) { //getting filter by a dependency array
+        arr = FilterArrayObject(arr, prop[i], propVal[i]);
     }
     return dispatch({
         type: ActionTypes.FILTER_EPISODES,
